@@ -210,6 +210,30 @@ vision_node/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vision_node.dir/build.make CMakeFiles/vision_node.dir/build
 .PHONY : vision_node/fast
 
+src/YOLOv11/YOLOv11.o: src/YOLOv11/YOLOv11.cpp.o
+.PHONY : src/YOLOv11/YOLOv11.o
+
+# target to build an object file
+src/YOLOv11/YOLOv11.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vision_node.dir/build.make CMakeFiles/vision_node.dir/src/YOLOv11/YOLOv11.cpp.o
+.PHONY : src/YOLOv11/YOLOv11.cpp.o
+
+src/YOLOv11/YOLOv11.i: src/YOLOv11/YOLOv11.cpp.i
+.PHONY : src/YOLOv11/YOLOv11.i
+
+# target to preprocess a source file
+src/YOLOv11/YOLOv11.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vision_node.dir/build.make CMakeFiles/vision_node.dir/src/YOLOv11/YOLOv11.cpp.i
+.PHONY : src/YOLOv11/YOLOv11.cpp.i
+
+src/YOLOv11/YOLOv11.s: src/YOLOv11/YOLOv11.cpp.s
+.PHONY : src/YOLOv11/YOLOv11.s
+
+# target to generate assembly for a file
+src/YOLOv11/YOLOv11.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vision_node.dir/build.make CMakeFiles/vision_node.dir/src/YOLOv11/YOLOv11.cpp.s
+.PHONY : src/YOLOv11/YOLOv11.cpp.s
+
 src/image_deal.o: src/image_deal.cpp.o
 .PHONY : src/image_deal.o
 
@@ -298,6 +322,9 @@ help:
 	@echo "... teamclimber_challenge_uninstall"
 	@echo "... uninstall"
 	@echo "... vision_node"
+	@echo "... src/YOLOv11/YOLOv11.o"
+	@echo "... src/YOLOv11/YOLOv11.i"
+	@echo "... src/YOLOv11/YOLOv11.s"
 	@echo "... src/image_deal.o"
 	@echo "... src/image_deal.i"
 	@echo "... src/image_deal.s"

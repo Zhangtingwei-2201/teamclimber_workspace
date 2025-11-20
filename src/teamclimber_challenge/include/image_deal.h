@@ -17,6 +17,9 @@
 #include <std_msgs/msg/header.hpp>
 
 #include "shape_tools.h"
+#include "YOLOv11.h"
+
+extern Logger logger;
 
 class vision_node : public rclcpp::Node
 {
@@ -25,6 +28,20 @@ public:
   vision_node(std::string name) : Node(name)
   {
     RCLCPP_INFO(this->get_logger(), "%s节点已经启动.", name.c_str());
+
+    // 初始化YOLO模型，使用智能指针
+    const std::string engine_file_path = "/home/zoupeng/teamclimber_workspace/src/teamclimber_challenge/models/best.engine";
+    try
+    {
+      model = std::make_unique<YOLOv11>(engine_file_path, logger);
+      RCLCPP_INFO(this->get_logger(), "YOLO模型加载成功");
+    }
+    catch (const std::exception &e)
+    {
+      RCLCPP_FATAL(this->get_logger(), "YOLO模型加载失败: %s", e.what());
+      rclcpp::shutdown();
+      return;
+    }
 
     Image_sub = this->create_subscription<sensor_msgs::msg::Image>(
         "/camera/image_raw", 10,
@@ -42,9 +59,11 @@ public:
 private:
   void callback_camera(sensor_msgs::msg::Image::SharedPtr msg);
 
+  // 模型创建
+  std::unique_ptr<YOLOv11> model;
+
   rclcpp::Subscription<sensor_msgs::msg::Image>::SharedPtr Image_sub;
   rclcpp::Publisher<referee_pkg::msg::MultiObject>::SharedPtr Target_pub;
-  std::vector<cv::Point2f> Point_V;
 };
 
 #endif

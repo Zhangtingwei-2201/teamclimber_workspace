@@ -1,0 +1,73 @@
+[0.006s] Invoking command in '/home/zoupeng/teamclimber_workspace/build/teamclimber_challenge': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/zoupeng/teamclimber_workspace/build/teamclimber_challenge -- -j32 -l32
+[0.027s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.096s] -- Found rclcpp: 16.0.15 (/opt/ros/humble/share/rclcpp/cmake)
+[0.111s] -- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.112s] -- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.115s] -- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.120s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.126s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.143s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.144s] -- Found rmw_fastrtps_cpp: 6.2.9 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.213s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.238s] -- Found gazebo_msgs: 3.9.0 (/opt/ros/humble/share/gazebo_msgs/cmake)
+[0.267s] -- Found cv_bridge: 3.2.1 (/opt/ros/humble/share/cv_bridge/cmake)
+[0.277s] -- Found referee_pkg: 0.0.0 (/home/zoupeng/Vision_Arena_2025/install/referee_pkg/share/referee_pkg/cmake)
+[0.284s] -- Found pose_msg: 0.0.0 (/home/zoupeng/Vision_Arena_2025/install/pose_msg/share/pose_msg/cmake)
+[0.335s] -- Configuring done
+[0.345s] -- Generating done
+[0.348s] -- Build files have been written to: /home/zoupeng/teamclimber_workspace/build/teamclimber_challenge
+[0.373s] [35m[1mConsolidate compiler generated dependencies of target vision_node[0m
+[0.391s] [ 16%] [32mBuilding CXX object CMakeFiles/vision_node.dir/src/image_deal.cpp.o[0m
+[2.398s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+[2.398s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+[2.398s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[2.398s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[2.398s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[2.398s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[2.399s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[2.399s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[2.399s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[2.399s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[2.399s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[2.399s]                  from [01m[K/home/zoupeng/teamclimber_workspace/src/teamclimber_challenge/include/image_deal.h:13[m[K,
+[2.399s]                  from [01m[K/home/zoupeng/teamclimber_workspace/src/teamclimber_challenge/src/image_deal.cpp:1[m[K:
+[2.399s] [01m[K/home/zoupeng/teamclimber_workspace/src/teamclimber_challenge/src/image_deal.cpp:[m[K In member function ‘[01m[Kvoid vision_node::callback_camera(sensor_msgs::msg::Image_<std::allocator<void> >::SharedPtr)[m[K’:
+[2.399s] [01m[K/home/zoupeng/teamclimber_workspace/src/teamclimber_challenge/src/image_deal.cpp:245:37:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%u[m[K’ expects argument of type ‘[01m[Kunsigned int[m[K’, but argument 5 has type ‘[01m[Kstd::vector<DetectedObject>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+[2.399s]   245 |     RCLCPP_INFO(this->get_logger(), [01;35m[K"Published %u total targets"[m[K, [32m[Kall_detected_objects.size()[m[K);
+[2.399s]       |                                     [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K  [32m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[2.399s]       |                                                                                            [32m[K|[m[K
+[2.399s]       |                                                                                            [32m[Kstd::vector<DetectedObject>::size_type {aka long unsigned int}[m[K
+[2.399s] [01m[K/home/zoupeng/teamclimber_workspace/src/teamclimber_challenge/src/image_deal.cpp:245:49:[m[K [01;36m[Knote: [m[Kformat string is defined here
+[2.399s]   245 |     RCLCPP_INFO(this->get_logger(), "Published [01;36m[K%u[m[K total targets", all_detected_objects.size());
+[2.399s]       |                                                [01;36m[K~^[m[K
+[2.399s]       |                                                 [01;36m[K|[m[K
+[2.399s]       |                                                 [01;36m[Kunsigned int[m[K
+[2.399s]       |                                                [32m[K%lu[m[K
+[4.211s] [ 33%] [32m[1mLinking CXX executable vision_node[0m
+[4.378s] /usr/bin/ld: warning: libopencv_imgproc.so.4.5d, needed by /opt/ros/humble/lib/libcv_bridge.so, may conflict with libopencv_imgproc.so.405
+[4.379s] /usr/bin/ld: warning: libopencv_core.so.4.5d, needed by /opt/ros/humble/lib/libcv_bridge.so, may conflict with libopencv_core.so.405
+[4.721s] [100%] Built target vision_node
+[4.731s] Invoked command in '/home/zoupeng/teamclimber_workspace/build/teamclimber_challenge' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/zoupeng/teamclimber_workspace/build/teamclimber_challenge -- -j32 -l32
+[4.740s] Invoking command in '/home/zoupeng/teamclimber_workspace/build/teamclimber_challenge': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/zoupeng/teamclimber_workspace/build/teamclimber_challenge
+[4.746s] -- Install configuration: ""
+[4.746s] -- Installing: /home/zoupeng/teamclimber_workspace/install/teamclimber_challenge/lib/teamclimber_challenge/vision_node
+[4.751s] -- Set runtime path of "/home/zoupeng/teamclimber_workspace/install/teamclimber_challenge/lib/teamclimber_challenge/vision_node" to ""
+[4.751s] -- Up-to-date: /home/zoupeng/teamclimber_workspace/install/teamclimber_challenge/share/teamclimber_challenge/launch
+[4.751s] -- Up-to-date: /home/zoupeng/teamclimber_workspace/install/teamclimber_challenge/share/teamclimber_challenge/launch/vision.launch.py
+[4.751s] -- Up-to-date: /home/zoupeng/teamclimber_workspace/install/teamclimber_challenge/share/teamclimber_challenge/launch/shooter.launch.py
+[4.751s] -- Up-to-date: /home/zoupeng/teamclimber_workspace/install/teamclimber_challenge/share/ament_index/resource_index/package_run_dependencies/teamclimber_challenge
+[4.751s] -- Installing: /home/zoupeng/teamclimber_workspace/install/teamclimber_challenge/share/ament_index/resource_index/parent_prefix_path/teamclimber_challenge
+[4.751s] -- Up-to-date: /home/zoupeng/teamclimber_workspace/install/teamclimber_challenge/share/teamclimber_challenge/environment/ament_prefix_path.sh
+[4.751s] -- Installing: /home/zoupeng/teamclimber_workspace/install/teamclimber_challenge/share/teamclimber_challenge/environment/ament_prefix_path.dsv
+[4.751s] -- Up-to-date: /home/zoupeng/teamclimber_workspace/install/teamclimber_challenge/share/teamclimber_challenge/environment/path.sh
+[4.751s] -- Installing: /home/zoupeng/teamclimber_workspace/install/teamclimber_challenge/share/teamclimber_challenge/environment/path.dsv
+[4.751s] -- Up-to-date: /home/zoupeng/teamclimber_workspace/install/teamclimber_challenge/share/teamclimber_challenge/local_setup.bash
+[4.751s] -- Up-to-date: /home/zoupeng/teamclimber_workspace/install/teamclimber_challenge/share/teamclimber_challenge/local_setup.sh
+[4.751s] -- Up-to-date: /home/zoupeng/teamclimber_workspace/install/teamclimber_challenge/share/teamclimber_challenge/local_setup.zsh
+[4.751s] -- Installing: /home/zoupeng/teamclimber_workspace/install/teamclimber_challenge/share/teamclimber_challenge/local_setup.dsv
+[4.751s] -- Installing: /home/zoupeng/teamclimber_workspace/install/teamclimber_challenge/share/teamclimber_challenge/package.dsv
+[4.751s] -- Up-to-date: /home/zoupeng/teamclimber_workspace/install/teamclimber_challenge/share/ament_index/resource_index/packages/teamclimber_challenge
+[4.751s] -- Up-to-date: /home/zoupeng/teamclimber_workspace/install/teamclimber_challenge/share/teamclimber_challenge/cmake/teamclimber_challengeConfig.cmake
+[4.751s] -- Up-to-date: /home/zoupeng/teamclimber_workspace/install/teamclimber_challenge/share/teamclimber_challenge/cmake/teamclimber_challengeConfig-version.cmake
+[4.751s] -- Up-to-date: /home/zoupeng/teamclimber_workspace/install/teamclimber_challenge/share/teamclimber_challenge/package.xml
+[4.753s] Invoked command in '/home/zoupeng/teamclimber_workspace/build/teamclimber_challenge' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/zoupeng/teamclimber_workspace/build/teamclimber_challenge

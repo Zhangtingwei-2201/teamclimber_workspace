@@ -1,0 +1,128 @@
+[0.006s] Invoking command in '/home/zoupeng/teamclimber_workspace/build/teamclimber_challenge': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/zoupeng/teamclimber_workspace/src/teamclimber_challenge -DCMAKE_INSTALL_PREFIX=/home/zoupeng/teamclimber_workspace/install/teamclimber_challenge
+[0.045s] -- The C compiler identification is GNU 11.4.0
+[0.079s] -- The CXX compiler identification is GNU 11.4.0
+[0.084s] -- Detecting C compiler ABI info
+[0.131s] -- Detecting C compiler ABI info - done
+[0.135s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.135s] -- Detecting C compile features
+[0.135s] -- Detecting C compile features - done
+[0.137s] -- Detecting CXX compiler ABI info
+[0.192s] -- Detecting CXX compiler ABI info - done
+[0.195s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.195s] -- Detecting CXX compile features
+[0.196s] -- Detecting CXX compile features - done
+[0.198s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.285s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.340s] -- Found rclcpp: 16.0.15 (/opt/ros/humble/share/rclcpp/cmake)
+[0.366s] -- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.369s] -- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.374s] -- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.381s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.390s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.415s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.417s] -- Found rmw_fastrtps_cpp: 6.2.9 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.489s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[0.509s] -- Found FastRTPS: /opt/ros/humble/include  
+[0.538s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.544s] -- Looking for pthread.h
+[0.596s] -- Looking for pthread.h - found
+[0.597s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[0.649s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[0.650s] -- Found Threads: TRUE  
+[0.678s] -- Found gazebo_msgs: 3.9.0 (/opt/ros/humble/share/gazebo_msgs/cmake)
+[0.710s] -- Found OpenCV: /usr/local (found version "4.5.5") 
+[0.711s] -- Found cv_bridge: 3.2.1 (/opt/ros/humble/share/cv_bridge/cmake)
+[0.721s] -- Found referee_pkg: 0.0.0 (/home/zoupeng/Vision_Arena_2025/install/referee_pkg/share/referee_pkg/cmake)
+[0.729s] -- Found pose_msg: 0.0.0 (/home/zoupeng/Vision_Arena_2025/install/pose_msg/share/pose_msg/cmake)
+[0.753s] -- Found CUDA: /usr/local/cuda (found version "12.2") 
+[0.790s] -- Configuring done
+[0.801s] -- Generating done
+[0.803s] -- Build files have been written to: /home/zoupeng/teamclimber_workspace/build/teamclimber_challenge
+[0.812s] Invoked command in '/home/zoupeng/teamclimber_workspace/build/teamclimber_challenge' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/zoupeng/teamclimber_workspace/src/teamclimber_challenge -DCMAKE_INSTALL_PREFIX=/home/zoupeng/teamclimber_workspace/install/teamclimber_challenge
+[0.813s] Invoking command in '/home/zoupeng/teamclimber_workspace/build/teamclimber_challenge': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/zoupeng/teamclimber_workspace/build/teamclimber_challenge -- -j32 -l32
+[0.844s] [ 16%] [34m[1mBuilding NVCC (Device) object CMakeFiles/vision_node.dir/src/YOLOv11/vision_node_generated_preprocess.cu.o[0m
+[1.861s] /usr/local/include/opencv4/opencv2/stitching/detail/warpers.hpp(235): warning #611-D: overloaded virtual function "cv::detail::PlaneWarper::buildMaps" is only partially overridden in class "cv::detail::AffineWarper"
+[1.861s]   class AffineWarper : public PlaneWarper
+[1.861s]         ^
+[1.861s] 
+[1.861s] Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+[1.862s] 
+[1.862s] /usr/local/include/opencv4/opencv2/stitching/detail/warpers.hpp(235): warning #611-D: overloaded virtual function "cv::detail::PlaneWarper::warp" is only partially overridden in class "cv::detail::AffineWarper"
+[1.862s]   class AffineWarper : public PlaneWarper
+[1.862s]         ^
+[1.862s] 
+[1.929s] /usr/local/include/opencv4/opencv2/stitching/detail/blenders.hpp(100): warning #611-D: overloaded virtual function "cv::detail::Blender::prepare" is only partially overridden in class "cv::detail::FeatherBlender"
+[1.929s]   class FeatherBlender : public Blender
+[1.929s]         ^
+[1.929s] 
+[1.929s] /usr/local/include/opencv4/opencv2/stitching/detail/blenders.hpp(127): warning #611-D: overloaded virtual function "cv::detail::Blender::prepare" is only partially overridden in class "cv::detail::MultiBandBlender"
+[1.929s]   class MultiBandBlender : public Blender
+[1.929s]         ^
+[1.929s] 
+[2.850s] /usr/local/include/opencv4/opencv2/stitching/detail/warpers.hpp(235): warning #611-D: overloaded virtual function "cv::detail::PlaneWarper::buildMaps" is only partially overridden in class "cv::detail::AffineWarper"
+[2.850s]   class AffineWarper : public PlaneWarper
+[2.850s]         ^
+[2.850s] 
+[2.850s] Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+[2.850s] 
+[2.850s] /usr/local/include/opencv4/opencv2/stitching/detail/warpers.hpp(235): warning #611-D: overloaded virtual function "cv::detail::PlaneWarper::warp" is only partially overridden in class "cv::detail::AffineWarper"
+[2.850s]   class AffineWarper : public PlaneWarper
+[2.850s]         ^
+[2.850s] 
+[2.910s] /usr/local/include/opencv4/opencv2/stitching/detail/blenders.hpp(100): warning #611-D: overloaded virtual function "cv::detail::Blender::prepare" is only partially overridden in class "cv::detail::FeatherBlender"
+[2.911s]   class FeatherBlender : public Blender
+[2.911s]         ^
+[2.911s] 
+[2.911s] /usr/local/include/opencv4/opencv2/stitching/detail/blenders.hpp(127): warning #611-D: overloaded virtual function "cv::detail::Blender::prepare" is only partially overridden in class "cv::detail::MultiBandBlender"
+[2.911s]   class MultiBandBlender : public Blender
+[2.911s]         ^
+[2.911s] 
+[4.511s] [ 83%] [32mBuilding CXX object CMakeFiles/vision_node.dir/src/shape_tools.cpp.o[0m
+[4.511s] [ 83%] [32mBuilding CXX object CMakeFiles/vision_node.dir/src/vision_node.cpp.o[0m
+[4.511s] [ 83%] [32mBuilding CXX object CMakeFiles/vision_node.dir/src/YOLOv11/YOLOv11.cpp.o[0m
+[4.511s] [ 83%] [32mBuilding CXX object CMakeFiles/vision_node.dir/src/image_deal.cpp.o[0m
+[5.365s] [01m[K/home/zoupeng/teamclimber_workspace/src/teamclimber_challenge/src/YOLOv11/YOLOv11.cpp:[m[K In member function ‘[01m[Kvoid YOLOv11::build(std::string, nvinfer1::ILogger&)[m[K’:
+[5.365s] [01m[K/home/zoupeng/teamclimber_workspace/src/teamclimber_challenge/src/YOLOv11/YOLOv11.cpp:189:38:[m[K [01;35m[Kwarning: [m[K‘[01m[Knvinfer1::BuilderFlag::kFP16[m[K’ is deprecated [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+[5.365s]   189 |         config->setFlag(BuilderFlag::[01;35m[KkFP16[m[K);
+[5.365s]       |                                      [01;35m[K^~~~~[m[K
+[5.365s] In file included from [01m[K/home/zoupeng/teamclimber_workspace/src/teamclimber_challenge/include/YOLOv11/YOLOv11.h:3[m[K,
+[5.365s]                  from [01m[K/home/zoupeng/teamclimber_workspace/src/teamclimber_challenge/src/YOLOv11/YOLOv11.cpp:1[m[K:
+[5.365s] [01m[K/home/zoupeng/TensorRT-10.14.1.48/include/NvInfer.h:9452:5:[m[K [01;36m[Knote: [m[Kdeclared here
+[5.366s]  9452 |     [01;36m[KkFP16[m[K TRT_DEPRECATED_ENUM = 0,
+[5.366s]       |     [01;36m[K^~~~~[m[K
+[5.366s] [01m[K/home/zoupeng/teamclimber_workspace/src/teamclimber_challenge/src/YOLOv11/YOLOv11.cpp:189:38:[m[K [01;35m[Kwarning: [m[K‘[01m[Knvinfer1::BuilderFlag::kFP16[m[K’ is deprecated [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+[5.366s]   189 |         config->setFlag(BuilderFlag::[01;35m[KkFP16[m[K);
+[5.366s]       |                                      [01;35m[K^~~~~[m[K
+[5.366s] In file included from [01m[K/home/zoupeng/teamclimber_workspace/src/teamclimber_challenge/include/YOLOv11/YOLOv11.h:3[m[K,
+[5.366s]                  from [01m[K/home/zoupeng/teamclimber_workspace/src/teamclimber_challenge/src/YOLOv11/YOLOv11.cpp:1[m[K:
+[5.366s] [01m[K/home/zoupeng/TensorRT-10.14.1.48/include/NvInfer.h:9452:5:[m[K [01;36m[Knote: [m[Kdeclared here
+[5.366s]  9452 |     [01;36m[KkFP16[m[K TRT_DEPRECATED_ENUM = 0,
+[5.366s]       |     [01;36m[K^~~~~[m[K
+[10.450s] [100%] [32m[1mLinking CXX executable vision_node[0m
+[10.614s] /usr/bin/ld: warning: libopencv_imgproc.so.4.5d, needed by /opt/ros/humble/lib/libcv_bridge.so, may conflict with libopencv_imgproc.so.405
+[10.614s] /usr/bin/ld: warning: libopencv_core.so.4.5d, needed by /opt/ros/humble/lib/libcv_bridge.so, may conflict with libopencv_core.so.405
+[10.944s] [100%] Built target vision_node
+[10.954s] Invoked command in '/home/zoupeng/teamclimber_workspace/build/teamclimber_challenge' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/zoupeng/teamclimber_workspace/build/teamclimber_challenge -- -j32 -l32
+[10.961s] Invoking command in '/home/zoupeng/teamclimber_workspace/build/teamclimber_challenge': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/zoupeng/teamclimber_workspace/build/teamclimber_challenge
+[10.967s] -- Install configuration: ""
+[10.967s] -- Installing: /home/zoupeng/teamclimber_workspace/install/teamclimber_challenge/lib/teamclimber_challenge/vision_node
+[10.970s] -- Set runtime path of "/home/zoupeng/teamclimber_workspace/install/teamclimber_challenge/lib/teamclimber_challenge/vision_node" to ""
+[10.970s] -- Installing: /home/zoupeng/teamclimber_workspace/install/teamclimber_challenge/share/teamclimber_challenge/launch
+[10.970s] -- Installing: /home/zoupeng/teamclimber_workspace/install/teamclimber_challenge/share/teamclimber_challenge/launch/vision.launch.py
+[10.970s] -- Installing: /home/zoupeng/teamclimber_workspace/install/teamclimber_challenge/share/teamclimber_challenge/launch/shooter.launch.py
+[10.971s] -- Installing: /home/zoupeng/teamclimber_workspace/install/teamclimber_challenge/share/ament_index/resource_index/package_run_dependencies/teamclimber_challenge
+[10.971s] -- Installing: /home/zoupeng/teamclimber_workspace/install/teamclimber_challenge/share/ament_index/resource_index/parent_prefix_path/teamclimber_challenge
+[10.971s] -- Installing: /home/zoupeng/teamclimber_workspace/install/teamclimber_challenge/share/teamclimber_challenge/environment/ament_prefix_path.sh
+[10.971s] -- Installing: /home/zoupeng/teamclimber_workspace/install/teamclimber_challenge/share/teamclimber_challenge/environment/ament_prefix_path.dsv
+[10.971s] -- Installing: /home/zoupeng/teamclimber_workspace/install/teamclimber_challenge/share/teamclimber_challenge/environment/path.sh
+[10.971s] -- Installing: /home/zoupeng/teamclimber_workspace/install/teamclimber_challenge/share/teamclimber_challenge/environment/path.dsv
+[10.971s] -- Installing: /home/zoupeng/teamclimber_workspace/install/teamclimber_challenge/share/teamclimber_challenge/local_setup.bash
+[10.971s] -- Installing: /home/zoupeng/teamclimber_workspace/install/teamclimber_challenge/share/teamclimber_challenge/local_setup.sh
+[10.971s] -- Installing: /home/zoupeng/teamclimber_workspace/install/teamclimber_challenge/share/teamclimber_challenge/local_setup.zsh
+[10.971s] -- Installing: /home/zoupeng/teamclimber_workspace/install/teamclimber_challenge/share/teamclimber_challenge/local_setup.dsv
+[10.971s] -- Installing: /home/zoupeng/teamclimber_workspace/install/teamclimber_challenge/share/teamclimber_challenge/package.dsv
+[10.971s] -- Installing: /home/zoupeng/teamclimber_workspace/install/teamclimber_challenge/share/ament_index/resource_index/packages/teamclimber_challenge
+[10.972s] -- Installing: /home/zoupeng/teamclimber_workspace/install/teamclimber_challenge/share/teamclimber_challenge/cmake/teamclimber_challengeConfig.cmake
+[10.972s] -- Installing: /home/zoupeng/teamclimber_workspace/install/teamclimber_challenge/share/teamclimber_challenge/cmake/teamclimber_challengeConfig-version.cmake
+[10.972s] -- Installing: /home/zoupeng/teamclimber_workspace/install/teamclimber_challenge/share/teamclimber_challenge/package.xml
+[10.973s] Invoked command in '/home/zoupeng/teamclimber_workspace/build/teamclimber_challenge' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/zoupeng/teamclimber_workspace/build/teamclimber_challenge

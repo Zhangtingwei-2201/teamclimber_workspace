@@ -21,6 +21,10 @@ class shape_tools
 public:
     // 稳定的球体点计算方法
     static std::vector<cv::Point2f> calculateStableSpherePoints(const cv::Point2f &center, float radius);
+
+    // 求出装甲板的四个坐标
+    static std::vector<cv::Point2f> calculateArmorPoints
+        (float bound_tlx, float bound_tly,float width, float height);
 };
 
 #endif

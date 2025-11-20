@@ -1,0 +1,245 @@
+[0.000000] (-) TimerEvent: {}
+[0.000312] (teamclimber_challenge) JobQueued: {'identifier': 'teamclimber_challenge', 'dependencies': OrderedDict()}
+[0.000330] (teamclimber_challenge) JobStarted: {'identifier': 'teamclimber_challenge'}
+[0.004843] (teamclimber_challenge) JobProgress: {'identifier': 'teamclimber_challenge', 'progress': 'cmake'}
+[0.005104] (teamclimber_challenge) Command: {'cmd': ['/usr/bin/cmake', '/home/zoupeng/teamclimber_workspace/src/teamclimber_challenge', '-DCMAKE_INSTALL_PREFIX=/home/zoupeng/teamclimber_workspace/install/teamclimber_challenge'], 'cwd': '/home/zoupeng/teamclimber_workspace/build/teamclimber_challenge', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('HTTPS_PROXY', 'http://127.0.0.1:7897/'), ('C_INCLUDE_PATH', '/home/zoupeng/TensorRT-10.14.1.48/include:'), ('no_proxy', 'localhost,127.0.0.1,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,172.29.0.0/16,::1'), ('LANGUAGE', 'zh_CN:en'), ('USER', 'zoupeng'), ('LC_TIME', 'zh_CN.UTF-8'), ('all_proxy', 'socks://127.0.0.1:7897/'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/zoupeng/Vision_Arena_2025/install/target_model_pkg/lib:/home/zoupeng/Vision_Arena_2025/install/referee_pkg/lib:/home/zoupeng/Vision_Arena_2025/install/camera/lib:/home/zoupeng/Vision_Arena_2025/install/pose_msg/lib:/home/zoupeng/onnxruntime/lib:/home/zoupeng/TensorRT-10.14.1.48/lib:/home/zoupeng/TensorRT-10.14.1.48/targets/x86_64-linux-gnu/lib:/opt/tensorrt/lib:/opt/tensorrt/lib:/opt/tensorrt/lib:/usr/local/cuda/lib64:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:'), ('HOME', '/home/zoupeng'), ('DESKTOP_SESSION', 'ubuntu'), ('NO_PROXY', 'localhost,127.0.0.1,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,172.29.0.0/16,::1'), ('GAZEBO_MASTER_URI', 'http://localhost:11345'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '2492'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=aec964cc08b7728d105d3cdc691e95f6'), ('COLORTERM', 'truecolor'), ('CPLUS_INCLUDE_PATH', '/home/zoupeng/TensorRT-10.14.1.48/include:'), ('IM_CONFIG_PHASE', '1'), ('https_proxy', 'http://127.0.0.1:7897/'), ('COLCON_PREFIX_PATH', '/home/zoupeng/Vision_Arena_2025/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'fcitx'), ('LOGNAME', 'zoupeng'), ('ALL_PROXY', 'socks://127.0.0.1:7897/'), ('http_proxy', 'http://127.0.0.1:7897/'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/usr/local/lib/pkgconfig:'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'zoupeng'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', '/usr/share/gazebo-11/models:'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('OGRE_RESOURCE_PATH', '/usr/lib/x86_64-linux-gnu/OGRE-1.9.0'), ('PATH', '/home/zoupeng/TensorRT-10.14.1.48/bin:/opt/tensorrt/bin:/opt/tensorrt/bin:/opt/tensorrt/bin:/usr/local/cuda/bin:/opt/ros/humble/bin:/home/zoupeng/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/zoupeng-Legion-R9000P-ADR10:@/tmp/.ICE-unix/2492,unix/zoupeng-Legion-R9000P-ADR10:/tmp/.ICE-unix/2492'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/7f3c77ec_636d_401a_9a7a_f3b6d15176aa'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('XMODIFIERS', '@im=fcitx'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('TENSORRT_ROOT', '/home/zoupeng/TensorRT-10.14.1.48'), ('GNOME_TERMINAL_SERVICE', ':1.541'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/zoupeng/Vision_Arena_2025/install/target_model_pkg:/home/zoupeng/Vision_Arena_2025/install/player_pkg:/home/zoupeng/Vision_Arena_2025/install/referee_pkg:/home/zoupeng/Vision_Arena_2025/install/camera:/home/zoupeng/Vision_Arena_2025/install/pose_msg:/home/zoupeng/Vision_Arena_2025/install/camera_sim_pkg:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GAZEBO_RESOURCE_PATH', '/usr/share/gazebo-11:'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('GAZEBO_MODEL_DATABASE_URI', 'http://models.gazebosim.org'), ('QT_IM_MODULE', 'fcitx'), ('PWD', '/home/zoupeng/teamclimber_workspace/build/teamclimber_challenge'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('GAZEBO_PLUGIN_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:'), ('CLUTTER_IM_MODULE', 'fcitx'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=aec964cc08b7728d105d3cdc691e95f6'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/zoupeng/Vision_Arena_2025/install/referee_pkg/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('HTTP_PROXY', 'http://127.0.0.1:7897/'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/zoupeng/Vision_Arena_2025/install/target_model_pkg:/home/zoupeng/Vision_Arena_2025/install/player_pkg:/home/zoupeng/Vision_Arena_2025/install/referee_pkg:/home/zoupeng/Vision_Arena_2025/install/camera:/home/zoupeng/Vision_Arena_2025/install/pose_msg:/home/zoupeng/Vision_Arena_2025/install/camera_sim_pkg:/opt/ros/humble')]), 'shell': False}
+[0.045111] (teamclimber_challenge) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.079613] (teamclimber_challenge) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.084344] (teamclimber_challenge) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.099924] (-) TimerEvent: {}
+[0.131700] (teamclimber_challenge) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.135337] (teamclimber_challenge) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.135484] (teamclimber_challenge) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.135702] (teamclimber_challenge) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.137371] (teamclimber_challenge) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.191909] (teamclimber_challenge) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.195567] (teamclimber_challenge) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.195786] (teamclimber_challenge) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.196147] (teamclimber_challenge) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.197993] (teamclimber_challenge) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.199997] (-) TimerEvent: {}
+[0.285687] (teamclimber_challenge) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[0.300084] (-) TimerEvent: {}
+[0.340177] (teamclimber_challenge) StdoutLine: {'line': b'-- Found rclcpp: 16.0.15 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[0.366163] (teamclimber_challenge) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.369598] (teamclimber_challenge) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.374406] (teamclimber_challenge) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.381040] (teamclimber_challenge) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.390046] (teamclimber_challenge) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.400164] (-) TimerEvent: {}
+[0.415459] (teamclimber_challenge) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.417211] (teamclimber_challenge) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.9 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.489500] (teamclimber_challenge) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[0.500237] (-) TimerEvent: {}
+[0.509187] (teamclimber_challenge) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[0.538519] (teamclimber_challenge) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[0.544681] (teamclimber_challenge) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[0.596602] (teamclimber_challenge) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[0.596899] (teamclimber_challenge) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[0.600309] (-) TimerEvent: {}
+[0.649718] (teamclimber_challenge) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[0.650468] (teamclimber_challenge) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[0.678351] (teamclimber_challenge) StdoutLine: {'line': b'-- Found gazebo_msgs: 3.9.0 (/opt/ros/humble/share/gazebo_msgs/cmake)\n'}
+[0.700387] (-) TimerEvent: {}
+[0.709888] (teamclimber_challenge) StdoutLine: {'line': b'-- Found OpenCV: /usr/local (found version "4.5.5") \n'}
+[0.711011] (teamclimber_challenge) StdoutLine: {'line': b'-- Found cv_bridge: 3.2.1 (/opt/ros/humble/share/cv_bridge/cmake)\n'}
+[0.721588] (teamclimber_challenge) StdoutLine: {'line': b'-- Found referee_pkg: 0.0.0 (/home/zoupeng/Vision_Arena_2025/install/referee_pkg/share/referee_pkg/cmake)\n'}
+[0.728885] (teamclimber_challenge) StdoutLine: {'line': b'-- Found pose_msg: 0.0.0 (/home/zoupeng/Vision_Arena_2025/install/pose_msg/share/pose_msg/cmake)\n'}
+[0.753287] (teamclimber_challenge) StdoutLine: {'line': b'-- Found CUDA: /usr/local/cuda (found version "12.2") \n'}
+[0.790288] (teamclimber_challenge) StdoutLine: {'line': b'-- Configuring done\n'}
+[0.800470] (-) TimerEvent: {}
+[0.800810] (teamclimber_challenge) StdoutLine: {'line': b'-- Generating done\n'}
+[0.803464] (teamclimber_challenge) StdoutLine: {'line': b'-- Build files have been written to: /home/zoupeng/teamclimber_workspace/build/teamclimber_challenge\n'}
+[0.812146] (teamclimber_challenge) CommandEnded: {'returncode': 0}
+[0.812520] (teamclimber_challenge) JobProgress: {'identifier': 'teamclimber_challenge', 'progress': 'build'}
+[0.813330] (teamclimber_challenge) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/zoupeng/teamclimber_workspace/build/teamclimber_challenge', '--', '-j32', '-l32'], 'cwd': '/home/zoupeng/teamclimber_workspace/build/teamclimber_challenge', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('HTTPS_PROXY', 'http://127.0.0.1:7897/'), ('C_INCLUDE_PATH', '/home/zoupeng/TensorRT-10.14.1.48/include:'), ('no_proxy', 'localhost,127.0.0.1,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,172.29.0.0/16,::1'), ('LANGUAGE', 'zh_CN:en'), ('USER', 'zoupeng'), ('LC_TIME', 'zh_CN.UTF-8'), ('all_proxy', 'socks://127.0.0.1:7897/'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/zoupeng/Vision_Arena_2025/install/target_model_pkg/lib:/home/zoupeng/Vision_Arena_2025/install/referee_pkg/lib:/home/zoupeng/Vision_Arena_2025/install/camera/lib:/home/zoupeng/Vision_Arena_2025/install/pose_msg/lib:/home/zoupeng/onnxruntime/lib:/home/zoupeng/TensorRT-10.14.1.48/lib:/home/zoupeng/TensorRT-10.14.1.48/targets/x86_64-linux-gnu/lib:/opt/tensorrt/lib:/opt/tensorrt/lib:/opt/tensorrt/lib:/usr/local/cuda/lib64:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:'), ('HOME', '/home/zoupeng'), ('DESKTOP_SESSION', 'ubuntu'), ('NO_PROXY', 'localhost,127.0.0.1,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,172.29.0.0/16,::1'), ('GAZEBO_MASTER_URI', 'http://localhost:11345'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '2492'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=aec964cc08b7728d105d3cdc691e95f6'), ('COLORTERM', 'truecolor'), ('CPLUS_INCLUDE_PATH', '/home/zoupeng/TensorRT-10.14.1.48/include:'), ('IM_CONFIG_PHASE', '1'), ('https_proxy', 'http://127.0.0.1:7897/'), ('COLCON_PREFIX_PATH', '/home/zoupeng/Vision_Arena_2025/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'fcitx'), ('LOGNAME', 'zoupeng'), ('ALL_PROXY', 'socks://127.0.0.1:7897/'), ('http_proxy', 'http://127.0.0.1:7897/'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/usr/local/lib/pkgconfig:'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'zoupeng'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', '/usr/share/gazebo-11/models:'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('OGRE_RESOURCE_PATH', '/usr/lib/x86_64-linux-gnu/OGRE-1.9.0'), ('PATH', '/home/zoupeng/TensorRT-10.14.1.48/bin:/opt/tensorrt/bin:/opt/tensorrt/bin:/opt/tensorrt/bin:/usr/local/cuda/bin:/opt/ros/humble/bin:/home/zoupeng/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/zoupeng-Legion-R9000P-ADR10:@/tmp/.ICE-unix/2492,unix/zoupeng-Legion-R9000P-ADR10:/tmp/.ICE-unix/2492'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/7f3c77ec_636d_401a_9a7a_f3b6d15176aa'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('XMODIFIERS', '@im=fcitx'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('TENSORRT_ROOT', '/home/zoupeng/TensorRT-10.14.1.48'), ('GNOME_TERMINAL_SERVICE', ':1.541'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/zoupeng/Vision_Arena_2025/install/target_model_pkg:/home/zoupeng/Vision_Arena_2025/install/player_pkg:/home/zoupeng/Vision_Arena_2025/install/referee_pkg:/home/zoupeng/Vision_Arena_2025/install/camera:/home/zoupeng/Vision_Arena_2025/install/pose_msg:/home/zoupeng/Vision_Arena_2025/install/camera_sim_pkg:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GAZEBO_RESOURCE_PATH', '/usr/share/gazebo-11:'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('GAZEBO_MODEL_DATABASE_URI', 'http://models.gazebosim.org'), ('QT_IM_MODULE', 'fcitx'), ('PWD', '/home/zoupeng/teamclimber_workspace/build/teamclimber_challenge'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('GAZEBO_PLUGIN_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:'), ('CLUTTER_IM_MODULE', 'fcitx'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=aec964cc08b7728d105d3cdc691e95f6'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/zoupeng/Vision_Arena_2025/install/referee_pkg/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('HTTP_PROXY', 'http://127.0.0.1:7897/'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/zoupeng/Vision_Arena_2025/install/target_model_pkg:/home/zoupeng/Vision_Arena_2025/install/player_pkg:/home/zoupeng/Vision_Arena_2025/install/referee_pkg:/home/zoupeng/Vision_Arena_2025/install/camera:/home/zoupeng/Vision_Arena_2025/install/pose_msg:/home/zoupeng/Vision_Arena_2025/install/camera_sim_pkg:/opt/ros/humble')]), 'shell': False}
+[0.844176] (teamclimber_challenge) StdoutLine: {'line': b'[ 16%] \x1b[34m\x1b[1mBuilding NVCC (Device) object CMakeFiles/vision_node.dir/src/YOLOv11/vision_node_generated_preprocess.cu.o\x1b[0m\n'}
+[0.900586] (-) TimerEvent: {}
+[1.000835] (-) TimerEvent: {}
+[1.101076] (-) TimerEvent: {}
+[1.201296] (-) TimerEvent: {}
+[1.301531] (-) TimerEvent: {}
+[1.401807] (-) TimerEvent: {}
+[1.502112] (-) TimerEvent: {}
+[1.602378] (-) TimerEvent: {}
+[1.702631] (-) TimerEvent: {}
+[1.802897] (-) TimerEvent: {}
+[1.861359] (teamclimber_challenge) StderrLine: {'line': b'/usr/local/include/opencv4/opencv2/stitching/detail/warpers.hpp(235): warning #611-D: overloaded virtual function "cv::detail::PlaneWarper::buildMaps" is only partially overridden in class "cv::detail::AffineWarper"\n'}
+[1.861561] (teamclimber_challenge) StderrLine: {'line': b'  class AffineWarper : public PlaneWarper\n'}
+[1.861624] (teamclimber_challenge) StderrLine: {'line': b'        ^\n'}
+[1.861692] (teamclimber_challenge) StderrLine: {'line': b'\n'}
+[1.861752] (teamclimber_challenge) StderrLine: {'line': b'Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"\n'}
+[1.861810] (teamclimber_challenge) StderrLine: {'line': b'\n'}
+[1.861864] (teamclimber_challenge) StderrLine: {'line': b'/usr/local/include/opencv4/opencv2/stitching/detail/warpers.hpp(235): warning #611-D: overloaded virtual function "cv::detail::PlaneWarper::warp" is only partially overridden in class "cv::detail::AffineWarper"\n'}
+[1.861910] (teamclimber_challenge) StderrLine: {'line': b'  class AffineWarper : public PlaneWarper\n'}
+[1.861958] (teamclimber_challenge) StderrLine: {'line': b'        ^\n'}
+[1.862000] (teamclimber_challenge) StderrLine: {'line': b'\n'}
+[1.902987] (-) TimerEvent: {}
+[1.928782] (teamclimber_challenge) StderrLine: {'line': b'/usr/local/include/opencv4/opencv2/stitching/detail/blenders.hpp(100): warning #611-D: overloaded virtual function "cv::detail::Blender::prepare" is only partially overridden in class "cv::detail::FeatherBlender"\n'}
+[1.928918] (teamclimber_challenge) StderrLine: {'line': b'  class FeatherBlender : public Blender\n'}
+[1.928952] (teamclimber_challenge) StderrLine: {'line': b'        ^\n'}
+[1.928982] (teamclimber_challenge) StderrLine: {'line': b'\n'}
+[1.929122] (teamclimber_challenge) StderrLine: {'line': b'/usr/local/include/opencv4/opencv2/stitching/detail/blenders.hpp(127): warning #611-D: overloaded virtual function "cv::detail::Blender::prepare" is only partially overridden in class "cv::detail::MultiBandBlender"\n'}
+[1.929153] (teamclimber_challenge) StderrLine: {'line': b'  class MultiBandBlender : public Blender\n'}
+[1.929180] (teamclimber_challenge) StderrLine: {'line': b'        ^\n'}
+[1.929212] (teamclimber_challenge) StderrLine: {'line': b'\n'}
+[2.003083] (-) TimerEvent: {}
+[2.103337] (-) TimerEvent: {}
+[2.203632] (-) TimerEvent: {}
+[2.303913] (-) TimerEvent: {}
+[2.404149] (-) TimerEvent: {}
+[2.504397] (-) TimerEvent: {}
+[2.604718] (-) TimerEvent: {}
+[2.704964] (-) TimerEvent: {}
+[2.805179] (-) TimerEvent: {}
+[2.850322] (teamclimber_challenge) StderrLine: {'line': b'/usr/local/include/opencv4/opencv2/stitching/detail/warpers.hpp(235): warning #611-D: overloaded virtual function "cv::detail::PlaneWarper::buildMaps" is only partially overridden in class "cv::detail::AffineWarper"\n'}
+[2.850465] (teamclimber_challenge) StderrLine: {'line': b'  class AffineWarper : public PlaneWarper\n'}
+[2.850503] (teamclimber_challenge) StderrLine: {'line': b'        ^\n'}
+[2.850558] (teamclimber_challenge) StderrLine: {'line': b'\n'}
+[2.850586] (teamclimber_challenge) StderrLine: {'line': b'Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"\n'}
+[2.850613] (teamclimber_challenge) StderrLine: {'line': b'\n'}
+[2.850654] (teamclimber_challenge) StderrLine: {'line': b'/usr/local/include/opencv4/opencv2/stitching/detail/warpers.hpp(235): warning #611-D: overloaded virtual function "cv::detail::PlaneWarper::warp" is only partially overridden in class "cv::detail::AffineWarper"\n'}
+[2.850707] (teamclimber_challenge) StderrLine: {'line': b'  class AffineWarper : public PlaneWarper\n'}
+[2.850733] (teamclimber_challenge) StderrLine: {'line': b'        ^\n'}
+[2.850763] (teamclimber_challenge) StderrLine: {'line': b'\n'}
+[2.905277] (-) TimerEvent: {}
+[2.910741] (teamclimber_challenge) StderrLine: {'line': b'/usr/local/include/opencv4/opencv2/stitching/detail/blenders.hpp(100): warning #611-D: overloaded virtual function "cv::detail::Blender::prepare" is only partially overridden in class "cv::detail::FeatherBlender"\n'}
+[2.910849] (teamclimber_challenge) StderrLine: {'line': b'  class FeatherBlender : public Blender\n'}
+[2.910884] (teamclimber_challenge) StderrLine: {'line': b'        ^\n'}
+[2.910914] (teamclimber_challenge) StderrLine: {'line': b'\n'}
+[2.910965] (teamclimber_challenge) StderrLine: {'line': b'/usr/local/include/opencv4/opencv2/stitching/detail/blenders.hpp(127): warning #611-D: overloaded virtual function "cv::detail::Blender::prepare" is only partially overridden in class "cv::detail::MultiBandBlender"\n'}
+[2.910992] (teamclimber_challenge) StderrLine: {'line': b'  class MultiBandBlender : public Blender\n'}
+[2.911019] (teamclimber_challenge) StderrLine: {'line': b'        ^\n'}
+[2.911044] (teamclimber_challenge) StderrLine: {'line': b'\n'}
+[3.005371] (-) TimerEvent: {}
+[3.105598] (-) TimerEvent: {}
+[3.205861] (-) TimerEvent: {}
+[3.306120] (-) TimerEvent: {}
+[3.406350] (-) TimerEvent: {}
+[3.506562] (-) TimerEvent: {}
+[3.606801] (-) TimerEvent: {}
+[3.707103] (-) TimerEvent: {}
+[3.807505] (-) TimerEvent: {}
+[3.907776] (-) TimerEvent: {}
+[4.008054] (-) TimerEvent: {}
+[4.108343] (-) TimerEvent: {}
+[4.208583] (-) TimerEvent: {}
+[4.308834] (-) TimerEvent: {}
+[4.409182] (-) TimerEvent: {}
+[4.509460] (-) TimerEvent: {}
+[4.511353] (teamclimber_challenge) StdoutLine: {'line': b'[ 83%] \x1b[32mBuilding CXX object CMakeFiles/vision_node.dir/src/shape_tools.cpp.o\x1b[0m\n'}
+[4.511480] (teamclimber_challenge) StdoutLine: {'line': b'[ 83%] \x1b[32mBuilding CXX object CMakeFiles/vision_node.dir/src/vision_node.cpp.o\x1b[0m\n'}
+[4.511527] (teamclimber_challenge) StdoutLine: {'line': b'[ 83%] \x1b[32mBuilding CXX object CMakeFiles/vision_node.dir/src/YOLOv11/YOLOv11.cpp.o\x1b[0m\n'}
+[4.511569] (teamclimber_challenge) StdoutLine: {'line': b'[ 83%] \x1b[32mBuilding CXX object CMakeFiles/vision_node.dir/src/image_deal.cpp.o\x1b[0m\n'}
+[4.609570] (-) TimerEvent: {}
+[4.709874] (-) TimerEvent: {}
+[4.810165] (-) TimerEvent: {}
+[4.910460] (-) TimerEvent: {}
+[5.010709] (-) TimerEvent: {}
+[5.110990] (-) TimerEvent: {}
+[5.211384] (-) TimerEvent: {}
+[5.311658] (-) TimerEvent: {}
+[5.365375] (teamclimber_challenge) StderrLine: {'line': b'\x1b[01m\x1b[K/home/zoupeng/teamclimber_workspace/src/teamclimber_challenge/src/YOLOv11/YOLOv11.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid YOLOv11::build(std::string, nvinfer1::ILogger&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[5.365532] (teamclimber_challenge) StderrLine: {'line': b'\x1b[01m\x1b[K/home/zoupeng/teamclimber_workspace/src/teamclimber_challenge/src/YOLOv11/YOLOv11.cpp:189:38:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Knvinfer1::BuilderFlag::kFP16\x1b[m\x1b[K\xe2\x80\x99 is deprecated [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations\x07-Wdeprecated-declarations\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[5.365583] (teamclimber_challenge) StderrLine: {'line': b'  189 |         config->setFlag(BuilderFlag::\x1b[01;35m\x1b[KkFP16\x1b[m\x1b[K);\n'}
+[5.365618] (teamclimber_challenge) StderrLine: {'line': b'      |                                      \x1b[01;35m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[5.365724] (teamclimber_challenge) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/zoupeng/teamclimber_workspace/src/teamclimber_challenge/include/YOLOv11/YOLOv11.h:3\x1b[m\x1b[K,\n'}
+[5.365768] (teamclimber_challenge) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/zoupeng/teamclimber_workspace/src/teamclimber_challenge/src/YOLOv11/YOLOv11.cpp:1\x1b[m\x1b[K:\n'}
+[5.365800] (teamclimber_challenge) StderrLine: {'line': b'\x1b[01m\x1b[K/home/zoupeng/TensorRT-10.14.1.48/include/NvInfer.h:9452:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kdeclared here\n'}
+[5.365836] (teamclimber_challenge) StderrLine: {'line': b' 9452 |     \x1b[01;36m\x1b[KkFP16\x1b[m\x1b[K TRT_DEPRECATED_ENUM = 0,\n'}
+[5.365864] (teamclimber_challenge) StderrLine: {'line': b'      |     \x1b[01;36m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[5.365891] (teamclimber_challenge) StderrLine: {'line': b'\x1b[01m\x1b[K/home/zoupeng/teamclimber_workspace/src/teamclimber_challenge/src/YOLOv11/YOLOv11.cpp:189:38:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Knvinfer1::BuilderFlag::kFP16\x1b[m\x1b[K\xe2\x80\x99 is deprecated [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations\x07-Wdeprecated-declarations\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[5.365941] (teamclimber_challenge) StderrLine: {'line': b'  189 |         config->setFlag(BuilderFlag::\x1b[01;35m\x1b[KkFP16\x1b[m\x1b[K);\n'}
+[5.365969] (teamclimber_challenge) StderrLine: {'line': b'      |                                      \x1b[01;35m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[5.365995] (teamclimber_challenge) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/zoupeng/teamclimber_workspace/src/teamclimber_challenge/include/YOLOv11/YOLOv11.h:3\x1b[m\x1b[K,\n'}
+[5.366020] (teamclimber_challenge) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/zoupeng/teamclimber_workspace/src/teamclimber_challenge/src/YOLOv11/YOLOv11.cpp:1\x1b[m\x1b[K:\n'}
+[5.366053] (teamclimber_challenge) StderrLine: {'line': b'\x1b[01m\x1b[K/home/zoupeng/TensorRT-10.14.1.48/include/NvInfer.h:9452:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kdeclared here\n'}
+[5.366080] (teamclimber_challenge) StderrLine: {'line': b' 9452 |     \x1b[01;36m\x1b[KkFP16\x1b[m\x1b[K TRT_DEPRECATED_ENUM = 0,\n'}
+[5.366109] (teamclimber_challenge) StderrLine: {'line': b'      |     \x1b[01;36m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[5.411749] (-) TimerEvent: {}
+[5.512009] (-) TimerEvent: {}
+[5.612253] (-) TimerEvent: {}
+[5.712506] (-) TimerEvent: {}
+[5.812720] (-) TimerEvent: {}
+[5.913002] (-) TimerEvent: {}
+[6.013287] (-) TimerEvent: {}
+[6.113512] (-) TimerEvent: {}
+[6.213777] (-) TimerEvent: {}
+[6.314041] (-) TimerEvent: {}
+[6.414310] (-) TimerEvent: {}
+[6.514540] (-) TimerEvent: {}
+[6.614775] (-) TimerEvent: {}
+[6.715090] (-) TimerEvent: {}
+[6.815495] (-) TimerEvent: {}
+[6.915706] (-) TimerEvent: {}
+[7.015943] (-) TimerEvent: {}
+[7.116207] (-) TimerEvent: {}
+[7.216435] (-) TimerEvent: {}
+[7.316671] (-) TimerEvent: {}
+[7.416911] (-) TimerEvent: {}
+[7.517194] (-) TimerEvent: {}
+[7.617413] (-) TimerEvent: {}
+[7.717682] (-) TimerEvent: {}
+[7.817971] (-) TimerEvent: {}
+[7.918216] (-) TimerEvent: {}
+[8.018472] (-) TimerEvent: {}
+[8.118707] (-) TimerEvent: {}
+[8.219017] (-) TimerEvent: {}
+[8.319338] (-) TimerEvent: {}
+[8.419598] (-) TimerEvent: {}
+[8.519843] (-) TimerEvent: {}
+[8.620071] (-) TimerEvent: {}
+[8.720308] (-) TimerEvent: {}
+[8.820554] (-) TimerEvent: {}
+[8.920807] (-) TimerEvent: {}
+[9.021022] (-) TimerEvent: {}
+[9.121233] (-) TimerEvent: {}
+[9.221476] (-) TimerEvent: {}
+[9.321744] (-) TimerEvent: {}
+[9.421988] (-) TimerEvent: {}
+[9.522205] (-) TimerEvent: {}
+[9.622421] (-) TimerEvent: {}
+[9.722719] (-) TimerEvent: {}
+[9.823091] (-) TimerEvent: {}
+[9.923335] (-) TimerEvent: {}
+[10.023572] (-) TimerEvent: {}
+[10.123874] (-) TimerEvent: {}
+[10.224256] (-) TimerEvent: {}
+[10.324508] (-) TimerEvent: {}
+[10.424800] (-) TimerEvent: {}
+[10.449800] (teamclimber_challenge) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable vision_node\x1b[0m\n'}
+[10.524897] (-) TimerEvent: {}
+[10.613906] (teamclimber_challenge) StderrLine: {'line': b'/usr/bin/ld: warning: libopencv_imgproc.so.4.5d, needed by /opt/ros/humble/lib/libcv_bridge.so, may conflict with libopencv_imgproc.so.405\n'}
+[10.614168] (teamclimber_challenge) StderrLine: {'line': b'/usr/bin/ld: warning: libopencv_core.so.4.5d, needed by /opt/ros/humble/lib/libcv_bridge.so, may conflict with libopencv_core.so.405\n'}
+[10.624963] (-) TimerEvent: {}
+[10.725148] (-) TimerEvent: {}
+[10.825558] (-) TimerEvent: {}
+[10.925821] (-) TimerEvent: {}
+[10.944136] (teamclimber_challenge) StdoutLine: {'line': b'[100%] Built target vision_node\n'}
+[10.953872] (teamclimber_challenge) CommandEnded: {'returncode': 0}
+[10.954462] (teamclimber_challenge) JobProgress: {'identifier': 'teamclimber_challenge', 'progress': 'install'}
+[10.961654] (teamclimber_challenge) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/zoupeng/teamclimber_workspace/build/teamclimber_challenge'], 'cwd': '/home/zoupeng/teamclimber_workspace/build/teamclimber_challenge', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('HTTPS_PROXY', 'http://127.0.0.1:7897/'), ('C_INCLUDE_PATH', '/home/zoupeng/TensorRT-10.14.1.48/include:'), ('no_proxy', 'localhost,127.0.0.1,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,172.29.0.0/16,::1'), ('LANGUAGE', 'zh_CN:en'), ('USER', 'zoupeng'), ('LC_TIME', 'zh_CN.UTF-8'), ('all_proxy', 'socks://127.0.0.1:7897/'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/zoupeng/Vision_Arena_2025/install/target_model_pkg/lib:/home/zoupeng/Vision_Arena_2025/install/referee_pkg/lib:/home/zoupeng/Vision_Arena_2025/install/camera/lib:/home/zoupeng/Vision_Arena_2025/install/pose_msg/lib:/home/zoupeng/onnxruntime/lib:/home/zoupeng/TensorRT-10.14.1.48/lib:/home/zoupeng/TensorRT-10.14.1.48/targets/x86_64-linux-gnu/lib:/opt/tensorrt/lib:/opt/tensorrt/lib:/opt/tensorrt/lib:/usr/local/cuda/lib64:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:'), ('HOME', '/home/zoupeng'), ('DESKTOP_SESSION', 'ubuntu'), ('NO_PROXY', 'localhost,127.0.0.1,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,172.29.0.0/16,::1'), ('GAZEBO_MASTER_URI', 'http://localhost:11345'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '2492'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=aec964cc08b7728d105d3cdc691e95f6'), ('COLORTERM', 'truecolor'), ('CPLUS_INCLUDE_PATH', '/home/zoupeng/TensorRT-10.14.1.48/include:'), ('IM_CONFIG_PHASE', '1'), ('https_proxy', 'http://127.0.0.1:7897/'), ('COLCON_PREFIX_PATH', '/home/zoupeng/Vision_Arena_2025/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'fcitx'), ('LOGNAME', 'zoupeng'), ('ALL_PROXY', 'socks://127.0.0.1:7897/'), ('http_proxy', 'http://127.0.0.1:7897/'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/usr/local/lib/pkgconfig:'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'zoupeng'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', '/usr/share/gazebo-11/models:'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('OGRE_RESOURCE_PATH', '/usr/lib/x86_64-linux-gnu/OGRE-1.9.0'), ('PATH', '/home/zoupeng/TensorRT-10.14.1.48/bin:/opt/tensorrt/bin:/opt/tensorrt/bin:/opt/tensorrt/bin:/usr/local/cuda/bin:/opt/ros/humble/bin:/home/zoupeng/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/zoupeng-Legion-R9000P-ADR10:@/tmp/.ICE-unix/2492,unix/zoupeng-Legion-R9000P-ADR10:/tmp/.ICE-unix/2492'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/7f3c77ec_636d_401a_9a7a_f3b6d15176aa'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('XMODIFIERS', '@im=fcitx'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('TENSORRT_ROOT', '/home/zoupeng/TensorRT-10.14.1.48'), ('GNOME_TERMINAL_SERVICE', ':1.541'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/zoupeng/Vision_Arena_2025/install/target_model_pkg:/home/zoupeng/Vision_Arena_2025/install/player_pkg:/home/zoupeng/Vision_Arena_2025/install/referee_pkg:/home/zoupeng/Vision_Arena_2025/install/camera:/home/zoupeng/Vision_Arena_2025/install/pose_msg:/home/zoupeng/Vision_Arena_2025/install/camera_sim_pkg:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GAZEBO_RESOURCE_PATH', '/usr/share/gazebo-11:'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('GAZEBO_MODEL_DATABASE_URI', 'http://models.gazebosim.org'), ('QT_IM_MODULE', 'fcitx'), ('PWD', '/home/zoupeng/teamclimber_workspace/build/teamclimber_challenge'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('GAZEBO_PLUGIN_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:'), ('CLUTTER_IM_MODULE', 'fcitx'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=aec964cc08b7728d105d3cdc691e95f6'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/zoupeng/Vision_Arena_2025/install/referee_pkg/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('HTTP_PROXY', 'http://127.0.0.1:7897/'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/zoupeng/Vision_Arena_2025/install/target_model_pkg:/home/zoupeng/Vision_Arena_2025/install/player_pkg:/home/zoupeng/Vision_Arena_2025/install/referee_pkg:/home/zoupeng/Vision_Arena_2025/install/camera:/home/zoupeng/Vision_Arena_2025/install/pose_msg:/home/zoupeng/Vision_Arena_2025/install/camera_sim_pkg:/opt/ros/humble')]), 'shell': False}
+[10.967020] (teamclimber_challenge) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[10.967126] (teamclimber_challenge) StdoutLine: {'line': b'-- Installing: /home/zoupeng/teamclimber_workspace/install/teamclimber_challenge/lib/teamclimber_challenge/vision_node\n'}
+[10.970527] (teamclimber_challenge) StdoutLine: {'line': b'-- Set runtime path of "/home/zoupeng/teamclimber_workspace/install/teamclimber_challenge/lib/teamclimber_challenge/vision_node" to ""\n'}
+[10.970592] (teamclimber_challenge) StdoutLine: {'line': b'-- Installing: /home/zoupeng/teamclimber_workspace/install/teamclimber_challenge/share/teamclimber_challenge/launch\n'}
+[10.970657] (teamclimber_challenge) StdoutLine: {'line': b'-- Installing: /home/zoupeng/teamclimber_workspace/install/teamclimber_challenge/share/teamclimber_challenge/launch/vision.launch.py\n'}
+[10.970704] (teamclimber_challenge) StdoutLine: {'line': b'-- Installing: /home/zoupeng/teamclimber_workspace/install/teamclimber_challenge/share/teamclimber_challenge/launch/shooter.launch.py\n'}
+[10.970832] (teamclimber_challenge) StdoutLine: {'line': b'-- Installing: /home/zoupeng/teamclimber_workspace/install/teamclimber_challenge/share/ament_index/resource_index/package_run_dependencies/teamclimber_challenge\n'}
+[10.970946] (teamclimber_challenge) StdoutLine: {'line': b'-- Installing: /home/zoupeng/teamclimber_workspace/install/teamclimber_challenge/share/ament_index/resource_index/parent_prefix_path/teamclimber_challenge\n'}
+[10.971052] (teamclimber_challenge) StdoutLine: {'line': b'-- Installing: /home/zoupeng/teamclimber_workspace/install/teamclimber_challenge/share/teamclimber_challenge/environment/ament_prefix_path.sh\n'}
+[10.971126] (teamclimber_challenge) StdoutLine: {'line': b'-- Installing: /home/zoupeng/teamclimber_workspace/install/teamclimber_challenge/share/teamclimber_challenge/environment/ament_prefix_path.dsv\n'}
+[10.971202] (teamclimber_challenge) StdoutLine: {'line': b'-- Installing: /home/zoupeng/teamclimber_workspace/install/teamclimber_challenge/share/teamclimber_challenge/environment/path.sh\n'}
+[10.971281] (teamclimber_challenge) StdoutLine: {'line': b'-- Installing: /home/zoupeng/teamclimber_workspace/install/teamclimber_challenge/share/teamclimber_challenge/environment/path.dsv\n'}
+[10.971369] (teamclimber_challenge) StdoutLine: {'line': b'-- Installing: /home/zoupeng/teamclimber_workspace/install/teamclimber_challenge/share/teamclimber_challenge/local_setup.bash\n'}
+[10.971441] (teamclimber_challenge) StdoutLine: {'line': b'-- Installing: /home/zoupeng/teamclimber_workspace/install/teamclimber_challenge/share/teamclimber_challenge/local_setup.sh\n'}
+[10.971521] (teamclimber_challenge) StdoutLine: {'line': b'-- Installing: /home/zoupeng/teamclimber_workspace/install/teamclimber_challenge/share/teamclimber_challenge/local_setup.zsh\n'}
+[10.971595] (teamclimber_challenge) StdoutLine: {'line': b'-- Installing: /home/zoupeng/teamclimber_workspace/install/teamclimber_challenge/share/teamclimber_challenge/local_setup.dsv\n'}
+[10.971682] (teamclimber_challenge) StdoutLine: {'line': b'-- Installing: /home/zoupeng/teamclimber_workspace/install/teamclimber_challenge/share/teamclimber_challenge/package.dsv\n'}
+[10.971795] (teamclimber_challenge) StdoutLine: {'line': b'-- Installing: /home/zoupeng/teamclimber_workspace/install/teamclimber_challenge/share/ament_index/resource_index/packages/teamclimber_challenge\n'}
+[10.971919] (teamclimber_challenge) StdoutLine: {'line': b'-- Installing: /home/zoupeng/teamclimber_workspace/install/teamclimber_challenge/share/teamclimber_challenge/cmake/teamclimber_challengeConfig.cmake\n'}
+[10.972039] (teamclimber_challenge) StdoutLine: {'line': b'-- Installing: /home/zoupeng/teamclimber_workspace/install/teamclimber_challenge/share/teamclimber_challenge/cmake/teamclimber_challengeConfig-version.cmake\n'}
+[10.972113] (teamclimber_challenge) StdoutLine: {'line': b'-- Installing: /home/zoupeng/teamclimber_workspace/install/teamclimber_challenge/share/teamclimber_challenge/package.xml\n'}
+[10.973418] (teamclimber_challenge) CommandEnded: {'returncode': 0}
+[10.981832] (teamclimber_challenge) JobEnded: {'identifier': 'teamclimber_challenge', 'rc': 0}
+[10.982118] (-) EventReactorShutdown: {}

@@ -1,0 +1,31 @@
+[0.009s] Invoking command in '/home/zoupeng/teamclimber_workspace/build/teamclimber_challenge': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/zoupeng/teamclimber_workspace/build/teamclimber_challenge -- -j32 -l32
+[0.059s] [35m[1mConsolidate compiler generated dependencies of target vision_node[0m
+[0.081s] [ 16%] [32mBuilding CXX object CMakeFiles/vision_node.dir/src/image_deal.cpp.o[0m
+[3.566s] [ 33%] [32m[1mLinking CXX executable vision_node[0m
+[3.734s] /usr/bin/ld: warning: libopencv_imgproc.so.4.5d, needed by /opt/ros/humble/lib/libcv_bridge.so, may conflict with libopencv_imgproc.so.405
+[3.734s] /usr/bin/ld: warning: libopencv_core.so.4.5d, needed by /opt/ros/humble/lib/libcv_bridge.so, may conflict with libopencv_core.so.405
+[4.066s] [100%] Built target vision_node
+[4.076s] Invoked command in '/home/zoupeng/teamclimber_workspace/build/teamclimber_challenge' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/zoupeng/teamclimber_workspace/build/teamclimber_challenge -- -j32 -l32
+[4.083s] Invoking command in '/home/zoupeng/teamclimber_workspace/build/teamclimber_challenge': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/zoupeng/teamclimber_workspace/build/teamclimber_challenge
+[4.089s] -- Install configuration: ""
+[4.089s] -- Installing: /home/zoupeng/teamclimber_workspace/install/teamclimber_challenge/lib/teamclimber_challenge/vision_node
+[4.093s] -- Set runtime path of "/home/zoupeng/teamclimber_workspace/install/teamclimber_challenge/lib/teamclimber_challenge/vision_node" to ""
+[4.093s] -- Up-to-date: /home/zoupeng/teamclimber_workspace/install/teamclimber_challenge/share/teamclimber_challenge/launch
+[4.093s] -- Up-to-date: /home/zoupeng/teamclimber_workspace/install/teamclimber_challenge/share/teamclimber_challenge/launch/vision.launch.py
+[4.093s] -- Up-to-date: /home/zoupeng/teamclimber_workspace/install/teamclimber_challenge/share/teamclimber_challenge/launch/shooter.launch.py
+[4.093s] -- Up-to-date: /home/zoupeng/teamclimber_workspace/install/teamclimber_challenge/share/ament_index/resource_index/package_run_dependencies/teamclimber_challenge
+[4.093s] -- Up-to-date: /home/zoupeng/teamclimber_workspace/install/teamclimber_challenge/share/ament_index/resource_index/parent_prefix_path/teamclimber_challenge
+[4.093s] -- Up-to-date: /home/zoupeng/teamclimber_workspace/install/teamclimber_challenge/share/teamclimber_challenge/environment/ament_prefix_path.sh
+[4.093s] -- Up-to-date: /home/zoupeng/teamclimber_workspace/install/teamclimber_challenge/share/teamclimber_challenge/environment/ament_prefix_path.dsv
+[4.093s] -- Up-to-date: /home/zoupeng/teamclimber_workspace/install/teamclimber_challenge/share/teamclimber_challenge/environment/path.sh
+[4.093s] -- Up-to-date: /home/zoupeng/teamclimber_workspace/install/teamclimber_challenge/share/teamclimber_challenge/environment/path.dsv
+[4.093s] -- Up-to-date: /home/zoupeng/teamclimber_workspace/install/teamclimber_challenge/share/teamclimber_challenge/local_setup.bash
+[4.093s] -- Up-to-date: /home/zoupeng/teamclimber_workspace/install/teamclimber_challenge/share/teamclimber_challenge/local_setup.sh
+[4.093s] -- Up-to-date: /home/zoupeng/teamclimber_workspace/install/teamclimber_challenge/share/teamclimber_challenge/local_setup.zsh
+[4.093s] -- Up-to-date: /home/zoupeng/teamclimber_workspace/install/teamclimber_challenge/share/teamclimber_challenge/local_setup.dsv
+[4.093s] -- Installing: /home/zoupeng/teamclimber_workspace/install/teamclimber_challenge/share/teamclimber_challenge/package.dsv
+[4.094s] -- Up-to-date: /home/zoupeng/teamclimber_workspace/install/teamclimber_challenge/share/ament_index/resource_index/packages/teamclimber_challenge
+[4.094s] -- Up-to-date: /home/zoupeng/teamclimber_workspace/install/teamclimber_challenge/share/teamclimber_challenge/cmake/teamclimber_challengeConfig.cmake
+[4.094s] -- Up-to-date: /home/zoupeng/teamclimber_workspace/install/teamclimber_challenge/share/teamclimber_challenge/cmake/teamclimber_challengeConfig-version.cmake
+[4.094s] -- Up-to-date: /home/zoupeng/teamclimber_workspace/install/teamclimber_challenge/share/teamclimber_challenge/package.xml
+[4.095s] Invoked command in '/home/zoupeng/teamclimber_workspace/build/teamclimber_challenge' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/zoupeng/teamclimber_workspace/build/teamclimber_challenge

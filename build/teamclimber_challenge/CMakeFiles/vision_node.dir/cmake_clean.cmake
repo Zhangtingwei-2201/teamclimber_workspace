@@ -1,4 +1,7 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/vision_node.dir/src/YOLOv11/YOLOv11.cpp.o"
+  "CMakeFiles/vision_node.dir/src/YOLOv11/YOLOv11.cpp.o.d"
+  "CMakeFiles/vision_node.dir/src/YOLOv11/vision_node_generated_preprocess.cu.o"
   "CMakeFiles/vision_node.dir/src/image_deal.cpp.o"
   "CMakeFiles/vision_node.dir/src/image_deal.cpp.o.d"
   "CMakeFiles/vision_node.dir/src/shape_tools.cpp.o"

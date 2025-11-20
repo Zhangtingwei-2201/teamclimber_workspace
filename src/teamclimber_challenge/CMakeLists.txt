@@ -12,28 +12,55 @@ find_package(cv_bridge REQUIRED)
 find_package(sensor_msgs REQUIRED)
 find_package(referee_pkg REQUIRED)
 find_package(pose_msg REQUIRED)
+find_package(CUDA REQUIRED)
 
-if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
-  add_compile_options(-Wall -Wextra -Wpedantic)
-endif()
+# Set TensorRT path if not set in environment variables
+set(TENSORRT_DIR "/home/zoupeng/TensorRT-10.14.1.48")
 
-if(BUILD_TESTING)
-  find_package(ament_lint_auto REQUIRED)
-  # the following line skips the linter which checks for copyrights
-  # comment the line when a copyright and license is added to all source files
-  set(ament_cmake_copyright_FOUND TRUE)
-  # the following line skips cpplint (only works in a git repo)
-  # comment the line when this package is in a git repo and when
-  # a copyright and license is added to all source files
-  set(ament_cmake_cpplint_FOUND TRUE)
-  ament_lint_auto_find_test_dependencies()
-endif()
+# Include TensorRT
+include_directories(${TENSORRT_DIR}/include)
+link_directories(${TENSORRT_DIR}/lib)
+set(TENSORRT_LIBS nvinfer nvinfer_plugin nvparsers nvonnxparser)
 
-add_executable(vision_node 
-  src/vision_node.cpp
-  src/image_deal.cpp
-  src/shape_tools.cpp)
+include_directories(
+  include
+  include/YOLOv11
+  ${CUDA_INCLUDE_DIRS}
+  ${TENSORRT_INCLUDE_DIR})
   
+# Add source files
+set(SOURCES
+    src/vision_node.cpp
+    src/image_deal.cpp
+    src/shape_tools.cpp
+    src/YOLOv11/YOLOv11.cpp
+)
+
+# Add CUDA source files
+set(CUDA_SOURCES src/YOLOv11/preprocess.cu)
+
+# Add headers
+set(HEADERS
+    include/image_deal.h
+    include/shape_tools.h
+    include/YOLOv11/YOLOv11.h
+    include/YOLOv11/macros.h
+    include/YOLOv11/logging.h
+    include/YOLOv11/cuda_utils.h
+    include/YOLOv11/preprocess.h
+    include/YOLOv11/common.h
+)
+
+# Create an executable
+cuda_add_executable(vision_node ${SOURCES} ${HEADERS} ${CUDA_SOURCES})
+
+# Link libraries
+target_link_libraries(vision_node
+    ${typesupport_target}
+    ${CUDA_LIBRARIES}
+    ${TENSORRT_LIBS}
+)
+
 ament_target_dependencies(vision_node
   rclcpp
   std_msgs
@@ -44,22 +71,11 @@ ament_target_dependencies(vision_node
   referee_pkg
 )
 
-# 链接OpenCV库
-target_link_libraries(vision_node ${OpenCV_LIBS})
-
-# 为Vision_test添加消息类型支持（新方法）
-target_link_libraries(vision_node ${typesupport_target})
-
 install(TARGETS
 vision_node
   DESTINATION lib/${PROJECT_NAME})
 
 install(DIRECTORY launch
   DESTINATION share/${PROJECT_NAME})
-
-# 包含OpenCV头文件及自己编写的头文件
-include_directories(
-  include
-  ${OpenCV_INCLUDE_DIRSee})
 
 ament_package()
