@@ -64,19 +64,19 @@ void vision_node::callback_camera(sensor_msgs::msg::Image::SharedPtr msg)
 
     /*===========================sphere===========================zp*/
     // 红色检测 - 使用稳定的范围
-    cv::Mat mask1, mask2, mask;
-    cv::inRange(hsv, cv::Scalar(0, 120, 70), cv::Scalar(10, 255, 255), mask1);
-    cv::inRange(hsv, cv::Scalar(170, 120, 70), cv::Scalar(180, 255, 255), mask2);
-    mask = mask1 | mask2;
+    cv::Mat mask1, mask2, mask_red;
+    cv::inRange(hsv, sphere_red_low1, sphere_red_high1, mask1);
+    cv::inRange(hsv, sphere_red_low2, sphere_red_high2, mask2);
+    mask_red = mask1 | mask2;
 
     // 适度的形态学操作
     cv::Mat kernel = cv::getStructuringElement(cv::MORPH_ELLIPSE, cv::Size(5, 5));
-    cv::morphologyEx(mask, mask, cv::MORPH_CLOSE, kernel);
-    cv::morphologyEx(mask, mask, cv::MORPH_OPEN, kernel);
+    cv::morphologyEx(mask_red, mask_red, cv::MORPH_CLOSE, kernel);
+    cv::morphologyEx(mask_red, mask_red, cv::MORPH_OPEN, kernel);
 
     // 找轮廓
     std::vector<std::vector<cv::Point>> contours;
-    cv::findContours(mask, contours, cv::RETR_EXTERNAL, cv::CHAIN_APPROX_SIMPLE);
+    cv::findContours(mask_red, contours, cv::RETR_EXTERNAL, cv::CHAIN_APPROX_SIMPLE);
 
     // 统计球的数量
     int valid_spheres = 0;
@@ -147,6 +147,119 @@ void vision_node::callback_camera(sensor_msgs::msg::Image::SharedPtr msg)
     }
 
     /*===========================rect===========================zwt*/
+    // 青色检测
+    cv::Mat cyan_mask;
+    cv::inRange(hsv, rect_cyan_low, rect_cyan_high, cyan_mask);
+
+    // 形态学去噪（轻度）
+    cv::Mat cyan_kernel = cv::getStructuringElement(cv::MORPH_RECT, cv::Size(5, 5));
+    cv::morphologyEx(cyan_mask, cyan_mask, cv::MORPH_OPEN, cyan_kernel);
+    cv::morphologyEx(cyan_mask, cyan_mask, cv::MORPH_CLOSE, cyan_kernel);
+
+    // 找 cyan 的轮廓
+    std::vector<std::vector<cv::Point>> cyan_contours;
+    cv::findContours(cyan_mask, cyan_contours, cv::RETR_EXTERNAL, cv::CHAIN_APPROX_SIMPLE);
+
+    // 统计rect数量
+    int valid_rects = 0;
+
+    for (size_t i = 0; i < cyan_contours.size(); i++)
+    {
+      double area = cv::contourArea(cyan_contours[i]);
+      if (area < rect_min_area)
+        continue;
+
+      double peri = cv::arcLength(cyan_contours[i], true);
+      if (peri < 1e-3)
+        continue;
+
+      // 逼近四边形
+      std::vector<cv::Point> poly;
+      cv::approxPolyDP(cyan_contours[i], poly, approx_eps_ratio * peri, true);
+
+      if (poly.size() > 7 && poly.size() < 3)
+        continue;
+      if (!cv::isContourConvex(poly))
+        continue;
+
+      // 用最小外接旋转矩形估计宽高/比例
+      cv::RotatedRect rr = cv::minAreaRect(poly);
+      float w = rr.size.width;
+      float h = rr.size.height;
+      if (w < 5 || h < 5)
+        continue;
+
+      float ratio = w > h ? w / h : h / w;
+      if (ratio < rect_min_ratio || ratio > rect_max_ratio)
+        continue;
+
+      valid_rects++;
+
+      // poly 转 Point2f
+      std::vector<cv::Point2f> pts;
+      for (auto &p : poly)
+        pts.emplace_back(p.x, p.y);
+
+      // 排序成：TL TR BR BL -> 输出顺序：1左下 2右下 3右上 4左上
+      std::sort(pts.begin(), pts.end(),
+                [](const cv::Point2f &a, const cv::Point2f &b)
+                { return a.y < b.y; });
+
+      std::vector<cv::Point2f> top{pts[0], pts[1]};
+      std::vector<cv::Point2f> bottom{pts[2], pts[3]};
+
+      std::sort(top.begin(), top.end(),
+                [](const cv::Point2f &a, const cv::Point2f &b)
+                { return a.x < b.x; });
+      std::sort(bottom.begin(), bottom.end(),
+                [](const cv::Point2f &a, const cv::Point2f &b)
+                { return a.x < b.x; });
+
+      cv::Point2f tl = top[0], tr = top[1];
+      cv::Point2f bl = bottom[0], br = bottom[1];
+
+      std::vector<cv::Point2f> rect_points = {bl, br, tr, tl};
+
+      // 红色矩形边框
+      for (int j = 0; j < 4; j++)
+      {
+        cv::line(result_image,
+                 rect_points[j],
+                 rect_points[(j + 1) % 4],
+                 cv::Scalar(0, 0, 255), // BGR 红色
+                 4);                    // 宽
+      }
+
+      for (int j = 0; j < 4; j++)
+      {
+        // 彩色实心点
+        cv::circle(result_image, rect_points[j], 7, point_colors[j], -1);
+        // 黑色描边
+        cv::circle(result_image, rect_points[j], 7, cv::Scalar(0, 0, 0), 2);
+
+        // 编号
+        std::string point_text = std::to_string(j + 1);
+        cv::Point text_pos(rect_points[j].x + 10, rect_points[j].y - 10);
+
+        cv::putText(result_image, point_text, text_pos,
+                    cv::FONT_HERSHEY_SIMPLEX, 0.8,
+                    cv::Scalar(255, 255, 255), 4); // 白色描边
+        cv::putText(result_image, point_text, text_pos,
+                    cv::FONT_HERSHEY_SIMPLEX, 0.8,
+                    point_colors[j], 2); // 彩色字
+
+        RCLCPP_INFO(this->get_logger(), "Rect %d, Point(%s): (%.1f, %.1f)",
+                    valid_rects, point_names[j].c_str(), rect_points[j].x, rect_points[j].y);
+      }
+
+      RCLCPP_INFO(this->get_logger(), "Found rect %d: center=(%.1f,%.1f) w=%.1f h=%.1f ratio=%.2f",
+                  valid_rects, rr.center.x, rr.center.y, w, h, ratio);
+
+      DetectedObject rect_obj;
+      rect_obj.type = "rect";
+      rect_obj.points = rect_points;
+      all_detected_objects.push_back(rect_obj);
+    }
 
     /*===========================armor===========================zp*/
     // 记录开始时间

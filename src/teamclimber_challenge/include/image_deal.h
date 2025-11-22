@@ -64,6 +64,22 @@ private:
 
   rclcpp::Subscription<sensor_msgs::msg::Image>::SharedPtr Image_sub;
   rclcpp::Publisher<referee_pkg::msg::MultiObject>::SharedPtr Target_pub;
+
+  // sphere参数
+  cv::Scalar sphere_red_low1 {0, 120, 70};
+  cv::Scalar sphere_red_high1{10, 255, 255};
+  cv::Scalar sphere_red_low2 {170, 120, 70};
+  cv::Scalar sphere_red_high2{180, 255, 255};
+
+  // rect参数
+  // cyan的HSV 范围 //H在OpenCV是0~180，所以80~105是偏青色一段
+  cv::Scalar rect_cyan_low{70, 60, 60};
+  cv::Scalar rect_cyan_high{120, 255, 255};
+
+  double rect_min_area = 100.0;   // 矩形最小面积
+  double rect_max_ratio = 8.0;    // 最大长宽比（太细长不要），ratio=长边/短边
+  double rect_min_ratio = 1.1;    // 最小长宽比（避免接近正方形时误判）
+  double approx_eps_ratio = 0.02; // approxPolyDP系数
 };
 
 #endif

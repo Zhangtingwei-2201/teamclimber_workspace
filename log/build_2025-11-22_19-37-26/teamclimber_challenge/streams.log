@@ -1,0 +1,84 @@
+[0.010s] Invoking command in '/home/zoupeng/teamclimber_workspace/build/teamclimber_challenge': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/zoupeng/teamclimber_workspace/build/teamclimber_challenge -- -j32 -l32
+[0.055s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.156s] -- Found rclcpp: 16.0.15 (/opt/ros/humble/share/rclcpp/cmake)
+[0.184s] -- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.186s] -- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.191s] -- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.198s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.206s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.228s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.229s] -- Found rmw_fastrtps_cpp: 6.2.9 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.300s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.335s] -- Found gazebo_msgs: 3.9.0 (/opt/ros/humble/share/gazebo_msgs/cmake)
+[0.364s] -- Found cv_bridge: 3.2.1 (/opt/ros/humble/share/cv_bridge/cmake)
+[0.380s] -- Found referee_pkg: 0.0.0 (/home/zoupeng/Vision_Arena_2025/install/referee_pkg/share/referee_pkg/cmake)
+[0.389s] -- Found pose_msg: 0.0.0 (/home/zoupeng/Vision_Arena_2025/install/pose_msg/share/pose_msg/cmake)
+[0.442s] -- Configuring done
+[0.455s] -- Generating done
+[0.457s] -- Build files have been written to: /home/zoupeng/teamclimber_workspace/build/teamclimber_challenge
+[0.483s] [35m[1mConsolidate compiler generated dependencies of target vision_node[0m
+[0.508s] [ 16%] [32mBuilding CXX object CMakeFiles/vision_node.dir/src/vision_node.cpp.o[0m
+[0.508s] [ 33%] [32mBuilding CXX object CMakeFiles/vision_node.dir/src/image_deal.cpp.o[0m
+[0.509s] [ 50%] [32mBuilding CXX object CMakeFiles/vision_node.dir/src/shape_tools.cpp.o[0m
+[2.487s] In file included from [01m[K/home/zoupeng/teamclimber_workspace/src/teamclimber_challenge/include/image_deal.h:19[m[K,
+[2.487s]                  from [01m[K/home/zoupeng/teamclimber_workspace/src/teamclimber_challenge/src/image_deal.cpp:1[m[K:
+[2.487s] [01m[K/home/zoupeng/teamclimber_workspace/src/teamclimber_challenge/include/shape_tools.h:32:120:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+[2.487s]    32 |     static std::vector<cv::Point2f> calculateArmor2DCorners(float bound_tlx, float bound_tly, float width, float height[01;31m[K)[m[K
+[2.487s]       |                                                                                                                        [01;31m[K^[m[K
+[2.487s]       |                                                                                                                         [32m[K;[m[K
+[2.492s] In file included from [01m[K/home/zoupeng/teamclimber_workspace/src/teamclimber_challenge/include/image_deal.h:19[m[K,
+[2.492s]                  from [01m[K/home/zoupeng/teamclimber_workspace/src/teamclimber_challenge/src/vision_node.cpp:16[m[K:
+[2.492s] [01m[K/home/zoupeng/teamclimber_workspace/src/teamclimber_challenge/include/shape_tools.h:32:120:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+[2.492s]    32 | r2DCorners(float bound_tlx, float bound_tly, float width, float height[01;31m[K)[m[K
+[2.492s]       |                                                                       [01;31m[K^[m[K
+[2.492s]       |                                                                        [32m[K;[m[K
+[2.492s] In file included from [01m[K/home/zoupeng/teamclimber_workspace/src/teamclimber_challenge/src/shape_tools.cpp:1[m[K:
+[2.492s] [01m[K/home/zoupeng/teamclimber_workspace/src/teamclimber_challenge/include/shape_tools.h:32:120:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+[2.492s]    32 |     static std::vector<cv::Point2f> calculateArmor2DCorners(float bound_tlx, float bound_tly, float width, float height[01;31m[K)[m[K
+[2.492s]       |                                                                                                                        [01;31m[K^[m[K
+[2.492s]       |                                                                                                                         [32m[K;[m[K
+[2.495s] [01m[K/home/zoupeng/teamclimber_workspace/src/teamclimber_challenge/src/shape_tools.cpp:[m[K In member function ‘[01m[Kdouble shape_tools::calculateLowTanElevation(double, double, double, double, double)[m[K’:
+[2.495s] [01m[K/home/zoupeng/teamclimber_workspace/src/teamclimber_challenge/src/shape_tools.cpp:67:82:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K;[m[K’ before ‘[01m[K)[m[K’ token
+[2.495s]    67 |     double discriminant = v0 * v0 * v0 * v0 - 2 * g * z * v0 * v0 - g * g * r * r[01;31m[K)[m[K;
+[2.495s]       |                                                                                  [01;31m[K^[m[K
+[2.582s] [01m[K/home/zoupeng/teamclimber_workspace/src/teamclimber_challenge/src/image_deal.cpp:[m[K In member function ‘[01m[Kvoid vision_node::callback_camera(sensor_msgs::msg::Image_<std::allocator<void> >::SharedPtr)[m[K’:
+[2.582s] [01m[K/home/zoupeng/teamclimber_workspace/src/teamclimber_challenge/src/image_deal.cpp:68:22:[m[K [01;31m[Kerror: [m[K‘[01m[Ksphere_red_low1[m[K’ was not declared in this scope
+[2.582s]    68 |     cv::inRange(hsv, [01;31m[Ksphere_red_low1[m[K, sphere_red_high1, mask1);
+[2.582s]       |                      [01;31m[K^~~~~~~~~~~~~~~[m[K
+[2.592s] [01m[K/home/zoupeng/teamclimber_workspace/src/teamclimber_challenge/src/image_deal.cpp:68:39:[m[K [01;31m[Kerror: [m[K‘[01m[Ksphere_red_high1[m[K’ was not declared in this scope
+[2.592s]    68 |     cv::inRange(hsv, sphere_red_low1, [01;31m[Ksphere_red_high1[m[K, mask1);
+[2.592s]       |                                       [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[2.601s] [01m[K/home/zoupeng/teamclimber_workspace/src/teamclimber_challenge/src/image_deal.cpp:69:22:[m[K [01;31m[Kerror: [m[K‘[01m[Ksphere_red_low2[m[K’ was not declared in this scope
+[2.601s]    69 |     cv::inRange(hsv, [01;31m[Ksphere_red_low2[m[K, sphere_red_high2, mask2);
+[2.601s]       |                      [01;31m[K^~~~~~~~~~~~~~~[m[K
+[2.611s] [01m[K/home/zoupeng/teamclimber_workspace/src/teamclimber_challenge/src/image_deal.cpp:69:39:[m[K [01;31m[Kerror: [m[K‘[01m[Ksphere_red_high2[m[K’ was not declared in this scope
+[2.611s]    69 |     cv::inRange(hsv, sphere_red_low2, [01;31m[Ksphere_red_high2[m[K, mask2);
+[2.611s]       |                                       [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[2.616s] [01m[K/home/zoupeng/teamclimber_workspace/src/teamclimber_challenge/src/image_deal.cpp:70:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kmask_red[m[K’ was not declared in this scope
+[2.616s]    70 |     [01;31m[Kmask_red[m[K = mask1 | mask2;
+[2.617s]       |     [01;31m[K^~~~~~~~[m[K
+[2.627s] [01m[K/home/zoupeng/teamclimber_workspace/src/teamclimber_challenge/src/image_deal.cpp:152:22:[m[K [01;31m[Kerror: [m[K‘[01m[Krect_cyan_low[m[K’ was not declared in this scope
+[2.627s]   152 |     cv::inRange(hsv, [01;31m[Krect_cyan_low[m[K, rect_cyan_high, cyan_mask);
+[2.627s]       |                      [01;31m[K^~~~~~~~~~~~~[m[K
+[2.635s] [01m[K/home/zoupeng/teamclimber_workspace/src/teamclimber_challenge/src/image_deal.cpp:152:37:[m[K [01;31m[Kerror: [m[K‘[01m[Krect_cyan_high[m[K’ was not declared in this scope
+[2.635s]   152 |     cv::inRange(hsv, rect_cyan_low, [01;31m[Krect_cyan_high[m[K, cyan_mask);
+[2.635s]       |                                     [01;31m[K^~~~~~~~~~~~~~[m[K
+[2.642s] [01m[K/home/zoupeng/teamclimber_workspace/src/teamclimber_challenge/src/image_deal.cpp:169:18:[m[K [01;31m[Kerror: [m[K‘[01m[Krect_min_area[m[K’ was not declared in this scope
+[2.642s]   169 |       if (area < [01;31m[Krect_min_area[m[K)
+[2.642s]       |                  [01;31m[K^~~~~~~~~~~~~[m[K
+[2.652s] [01m[K/home/zoupeng/teamclimber_workspace/src/teamclimber_challenge/src/image_deal.cpp:178:48:[m[K [01;31m[Kerror: [m[K‘[01m[Kapprox_eps_ratio[m[K’ was not declared in this scope
+[2.652s]   178 |       cv::approxPolyDP(cyan_contours[i], poly, [01;31m[Kapprox_eps_ratio[m[K * peri, true);
+[2.652s]       |                                                [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[2.660s] [01m[K/home/zoupeng/teamclimber_workspace/src/teamclimber_challenge/src/image_deal.cpp:193:19:[m[K [01;31m[Kerror: [m[K‘[01m[Krect_min_ratio[m[K’ was not declared in this scope
+[2.660s]   193 |       if (ratio < [01;31m[Krect_min_ratio[m[K || ratio > rect_max_ratio)
+[2.660s]       |                   [01;31m[K^~~~~~~~~~~~~~[m[K
+[2.667s] [01m[K/home/zoupeng/teamclimber_workspace/src/teamclimber_challenge/src/image_deal.cpp:193:45:[m[K [01;31m[Kerror: [m[K‘[01m[Krect_max_ratio[m[K’ was not declared in this scope
+[2.667s]   193 |       if (ratio < rect_min_ratio || ratio > [01;31m[Krect_max_ratio[m[K)
+[2.667s]       |                                             [01;31m[K^~~~~~~~~~~~~~[m[K
+[2.948s] gmake[2]: *** [CMakeFiles/vision_node.dir/build.make:565：CMakeFiles/vision_node.dir/src/shape_tools.cpp.o] 错误 1
+[2.948s] gmake[2]: *** 正在等待未完成的任务....
+[3.834s] gmake[2]: *** [CMakeFiles/vision_node.dir/build.make:537：CMakeFiles/vision_node.dir/src/vision_node.cpp.o] 错误 1
+[3.897s] gmake[2]: *** [CMakeFiles/vision_node.dir/build.make:551：CMakeFiles/vision_node.dir/src/image_deal.cpp.o] 错误 1
+[3.898s] gmake[1]: *** [CMakeFiles/Makefile2:137：CMakeFiles/vision_node.dir/all] 错误 2
+[3.898s] gmake: *** [Makefile:146：all] 错误 2
+[3.900s] Invoked command in '/home/zoupeng/teamclimber_workspace/build/teamclimber_challenge' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/zoupeng/teamclimber_workspace/build/teamclimber_challenge -- -j32 -l32

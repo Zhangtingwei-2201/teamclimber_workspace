@@ -1,0 +1,82 @@
+[0.008s] Invoking command in '/home/zoupeng/teamclimber_workspace/build/teamclimber_challenge': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/zoupeng/teamclimber_workspace/build/teamclimber_challenge -- -j32 -l32
+[0.056s] [35m[1mConsolidate compiler generated dependencies of target vision_node[0m
+[0.079s] [ 16%] [32mBuilding CXX object CMakeFiles/vision_node.dir/src/vision_node.cpp.o[0m
+[0.079s] [ 33%] [32mBuilding CXX object CMakeFiles/vision_node.dir/src/image_deal.cpp.o[0m
+[1.964s] In file included from [01m[K/home/zoupeng/teamclimber_workspace/src/teamclimber_challenge/src/vision_node.cpp:16[m[K:
+[1.964s] [01m[K/home/zoupeng/teamclimber_workspace/src/teamclimber_challenge/include/image_deal.h:69:30:[m[K [01;31m[Kerror: [m[Kexpected identifier before numeric constant
+[1.964s]    69 |   cv::Scalar sphere_red_low1([01;31m[K0[m[K, 120, 70);
+[1.964s]       |                              [01;31m[K^[m[K
+[1.964s] [01m[K/home/zoupeng/teamclimber_workspace/src/teamclimber_challenge/include/image_deal.h:69:30:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K...[m[K’ before numeric constant
+[1.964s] [01m[K/home/zoupeng/teamclimber_workspace/src/teamclimber_challenge/include/image_deal.h:70:31:[m[K [01;31m[Kerror: [m[Kexpected identifier before numeric constant
+[1.964s]    70 |   cv::Scalar sphere_red_high1([01;31m[K10[m[K, 255, 255);
+[1.964s]       |                               [01;31m[K^~[m[K
+[1.964s] [01m[K/home/zoupeng/teamclimber_workspace/src/teamclimber_challenge/include/image_deal.h:70:31:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K...[m[K’ before numeric constant
+[1.964s] [01m[K/home/zoupeng/teamclimber_workspace/src/teamclimber_challenge/include/image_deal.h:71:30:[m[K [01;31m[Kerror: [m[Kexpected identifier before numeric constant
+[1.964s]    71 |   cv::Scalar sphere_red_low2([01;31m[K170[m[K, 120, 70);
+[1.964s]       |                              [01;31m[K^~~[m[K
+[1.964s] [01m[K/home/zoupeng/teamclimber_workspace/src/teamclimber_challenge/include/image_deal.h:71:30:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K...[m[K’ before numeric constant
+[1.964s] [01m[K/home/zoupeng/teamclimber_workspace/src/teamclimber_challenge/include/image_deal.h:72:31:[m[K [01;31m[Kerror: [m[Kexpected identifier before numeric constant
+[1.964s]    72 |   cv::Scalar sphere_red_high2([01;31m[K180[m[K, 255, 255);
+[1.964s]       |                               [01;31m[K^~~[m[K
+[1.965s] [01m[K/home/zoupeng/teamclimber_workspace/src/teamclimber_challenge/include/image_deal.h:72:31:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K...[m[K’ before numeric constant
+[1.965s] [01m[K/home/zoupeng/teamclimber_workspace/src/teamclimber_challenge/include/image_deal.h:76:28:[m[K [01;31m[Kerror: [m[Kexpected identifier before numeric constant
+[1.965s]    76 |   cv::Scalar rect_cyan_low([01;31m[K80[m[K, 60, 60);
+[1.965s]       |                            [01;31m[K^~[m[K
+[1.965s] [01m[K/home/zoupeng/teamclimber_workspace/src/teamclimber_challenge/include/image_deal.h:76:28:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K...[m[K’ before numeric constant
+[1.965s] [01m[K/home/zoupeng/teamclimber_workspace/src/teamclimber_challenge/include/image_deal.h:77:29:[m[K [01;31m[Kerror: [m[Kexpected identifier before numeric constant
+[1.965s]    77 |   cv::Scalar rect_cyan_high([01;31m[K105[m[K, 255, 255);
+[1.965s]       |                             [01;31m[K^~~[m[K
+[1.965s] [01m[K/home/zoupeng/teamclimber_workspace/src/teamclimber_challenge/include/image_deal.h:77:29:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K...[m[K’ before numeric constant
+[1.990s] In file included from [01m[K/home/zoupeng/teamclimber_workspace/src/teamclimber_challenge/src/image_deal.cpp:1[m[K:
+[1.990s] [01m[K/home/zoupeng/teamclimber_workspace/src/teamclimber_challenge/include/image_deal.h:69:30:[m[K [01;31m[Kerror: [m[Kexpected identifier before numeric constant
+[1.990s]    69 |   cv::Scalar sphere_red_low1([01;31m[K0[m[K, 120, 70);
+[1.990s]       |                              [01;31m[K^[m[K
+[1.990s] [01m[K/home/zoupeng/teamclimber_workspace/src/teamclimber_challenge/include/image_deal.h:69:30:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K...[m[K’ before numeric constant
+[1.990s] [01m[K/home/zoupeng/teamclimber_workspace/src/teamclimber_challenge/include/image_deal.h:70:31:[m[K [01;31m[Kerror: [m[Kexpected identifier before numeric constant
+[1.990s]    70 |   cv::Scalar sphere_red_high1([01;31m[K10[m[K, 255, 255);
+[1.990s]       |                               [01;31m[K^~[m[K
+[1.990s] [01m[K/home/zoupeng/teamclimber_workspace/src/teamclimber_challenge/include/image_deal.h:70:31:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K...[m[K’ before numeric constant
+[1.990s] [01m[K/home/zoupeng/teamclimber_workspace/src/teamclimber_challenge/include/image_deal.h:71:30:[m[K [01;31m[Kerror: [m[Kexpected identifier before numeric constant
+[1.990s]    71 |   cv::Scalar sphere_red_low2([01;31m[K170[m[K, 120, 70);
+[1.990s]       |                              [01;31m[K^~~[m[K
+[1.990s] [01m[K/home/zoupeng/teamclimber_workspace/src/teamclimber_challenge/include/image_deal.h:71:30:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K...[m[K’ before numeric constant
+[1.990s] [01m[K/home/zoupeng/teamclimber_workspace/src/teamclimber_challenge/include/image_deal.h:72:31:[m[K [01;31m[Kerror: [m[Kexpected identifier before numeric constant
+[1.990s]    72 |   cv::Scalar sphere_red_high2([01;31m[K180[m[K, 255, 255);
+[1.990s]       |                               [01;31m[K^~~[m[K
+[1.991s] [01m[K/home/zoupeng/teamclimber_workspace/src/teamclimber_challenge/include/image_deal.h:72:31:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K...[m[K’ before numeric constant
+[1.991s] [01m[K/home/zoupeng/teamclimber_workspace/src/teamclimber_challenge/include/image_deal.h:76:28:[m[K [01;31m[Kerror: [m[Kexpected identifier before numeric constant
+[1.991s]    76 |   cv::Scalar rect_cyan_low([01;31m[K80[m[K, 60, 60);
+[1.991s]       |                            [01;31m[K^~[m[K
+[1.991s] [01m[K/home/zoupeng/teamclimber_workspace/src/teamclimber_challenge/include/image_deal.h:76:28:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K...[m[K’ before numeric constant
+[1.991s] [01m[K/home/zoupeng/teamclimber_workspace/src/teamclimber_challenge/include/image_deal.h:77:29:[m[K [01;31m[Kerror: [m[Kexpected identifier before numeric constant
+[1.991s]    77 |   cv::Scalar rect_cyan_high([01;31m[K105[m[K, 255, 255);
+[1.991s]       |                             [01;31m[K^~~[m[K
+[1.991s] [01m[K/home/zoupeng/teamclimber_workspace/src/teamclimber_challenge/include/image_deal.h:77:29:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K...[m[K’ before numeric constant
+[2.005s] [01m[K/home/zoupeng/teamclimber_workspace/src/teamclimber_challenge/src/image_deal.cpp:[m[K In member function ‘[01m[Kvoid vision_node::callback_camera(sensor_msgs::msg::Image_<std::allocator<void> >::SharedPtr)[m[K’:
+[2.005s] [01m[K/home/zoupeng/teamclimber_workspace/src/teamclimber_challenge/src/image_deal.cpp:68:30:[m[K [01;31m[Kerror: [m[Kinvalid use of non-static member function ‘[01m[Kcv::Scalar vision_node::sphere_red_low1(int)[m[K’
+[2.005s]    68 |     mask1 = cv::inRange(hsv, [01;31m[Ksphere_red_low1[m[K, sphere_red_high1, mask1);
+[2.005s]       |                              [01;31m[K^~~~~~~~~~~~~~~[m[K
+[2.005s] In file included from [01m[K/home/zoupeng/teamclimber_workspace/src/teamclimber_challenge/src/image_deal.cpp:1[m[K:
+[2.005s] [01m[K/home/zoupeng/teamclimber_workspace/src/teamclimber_challenge/include/image_deal.h:69:14:[m[K [01;36m[Knote: [m[Kdeclared here
+[2.005s]    69 |   cv::Scalar [01;36m[Ksphere_red_low1[m[K(0, 120, 70);
+[2.005s]       |              [01;36m[K^~~~~~~~~~~~~~~[m[K
+[2.005s] [01m[K/home/zoupeng/teamclimber_workspace/src/teamclimber_challenge/src/image_deal.cpp:69:30:[m[K [01;31m[Kerror: [m[Kinvalid use of non-static member function ‘[01m[Kcv::Scalar vision_node::sphere_red_low2(int)[m[K’
+[2.005s]    69 |     mask2 = cv::inRange(hsv, [01;31m[Ksphere_red_low2[m[K, sphere_red_high2, mask2);
+[2.005s]       |                              [01;31m[K^~~~~~~~~~~~~~~[m[K
+[2.005s] In file included from [01m[K/home/zoupeng/teamclimber_workspace/src/teamclimber_challenge/src/image_deal.cpp:1[m[K:
+[2.005s] [01m[K/home/zoupeng/teamclimber_workspace/src/teamclimber_challenge/include/image_deal.h:71:14:[m[K [01;36m[Knote: [m[Kdeclared here
+[2.005s]    71 |   cv::Scalar [01;36m[Ksphere_red_low2[m[K(170, 120, 70);
+[2.005s]       |              [01;36m[K^~~~~~~~~~~~~~~[m[K
+[2.007s] [01m[K/home/zoupeng/teamclimber_workspace/src/teamclimber_challenge/src/image_deal.cpp:152:22:[m[K [01;31m[Kerror: [m[Kinvalid use of non-static member function ‘[01m[Kcv::Scalar vision_node::rect_cyan_low(int)[m[K’
+[2.007s]   152 |     cv::inRange(hsv, [01;31m[Krect_cyan_low[m[K, rect_cyan_high, cyan_mask);
+[2.007s]       |                      [01;31m[K^~~~~~~~~~~~~[m[K
+[2.007s] In file included from [01m[K/home/zoupeng/teamclimber_workspace/src/teamclimber_challenge/src/image_deal.cpp:1[m[K:
+[2.007s] [01m[K/home/zoupeng/teamclimber_workspace/src/teamclimber_challenge/include/image_deal.h:76:14:[m[K [01;36m[Knote: [m[Kdeclared here
+[2.007s]    76 |   cv::Scalar [01;36m[Krect_cyan_low[m[K(80, 60, 60);
+[2.007s]       |              [01;36m[K^~~~~~~~~~~~~[m[K
+[3.184s] gmake[2]: *** [CMakeFiles/vision_node.dir/build.make:537：CMakeFiles/vision_node.dir/src/vision_node.cpp.o] 错误 1
+[3.184s] gmake[2]: *** 正在等待未完成的任务....
+[3.204s] gmake[2]: *** [CMakeFiles/vision_node.dir/build.make:551：CMakeFiles/vision_node.dir/src/image_deal.cpp.o] 错误 1
+[3.204s] gmake[1]: *** [CMakeFiles/Makefile2:137：CMakeFiles/vision_node.dir/all] 错误 2
+[3.205s] gmake: *** [Makefile:146：all] 错误 2
+[3.207s] Invoked command in '/home/zoupeng/teamclimber_workspace/build/teamclimber_challenge' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/zoupeng/teamclimber_workspace/build/teamclimber_challenge -- -j32 -l32

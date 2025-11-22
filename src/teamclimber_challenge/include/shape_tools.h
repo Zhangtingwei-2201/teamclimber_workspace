@@ -22,9 +22,17 @@ public:
     // 稳定的球体点计算方法
     static std::vector<cv::Point2f> calculateStableSpherePoints(const cv::Point2f &center, float radius);
 
-    // 求出装甲板的四个坐标
-    static std::vector<cv::Point2f> calculateArmorPoints
-        (float bound_tlx, float bound_tly,float width, float height);
+    // 求出矩形四个顶点
+    static std::vector<cv::Point2f> calculateRectanglePoints(const cv::Point2f &center,float width,float height);
+
+    // 求出装甲板的四个灯条坐标
+    static std::vector<cv::Point2f> calculateArmorPoints(float bound_tlx, float bound_tly, float width, float height);
+
+    // 求出装甲板的四个角点坐标
+    static std::vector<cv::Point2f> calculateArmor2DCorners(float bound_tlx, float bound_tly, float width, float height);
+
+    // 计算低弹道仰角
+    double calculateLowTanElevation(double x, double y, double z, double v0, double g);
 };
 
 #endif

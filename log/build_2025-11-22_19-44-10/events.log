@@ -1,0 +1,143 @@
+[0.000000] (-) TimerEvent: {}
+[0.000133] (teamclimber_challenge) JobQueued: {'identifier': 'teamclimber_challenge', 'dependencies': OrderedDict()}
+[0.000159] (teamclimber_challenge) JobStarted: {'identifier': 'teamclimber_challenge'}
+[0.006782] (teamclimber_challenge) JobProgress: {'identifier': 'teamclimber_challenge', 'progress': 'cmake'}
+[0.007874] (teamclimber_challenge) JobProgress: {'identifier': 'teamclimber_challenge', 'progress': 'build'}
+[0.007916] (teamclimber_challenge) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/zoupeng/teamclimber_workspace/build/teamclimber_challenge', '--', '-j32', '-l32'], 'cwd': '/home/zoupeng/teamclimber_workspace/build/teamclimber_challenge', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('HTTPS_PROXY', 'http://127.0.0.1:7897/'), ('C_INCLUDE_PATH', '/home/zoupeng/TensorRT-10.14.1.48/include:'), ('no_proxy', 'localhost,127.0.0.1,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,172.29.0.0/16,::1'), ('LANGUAGE', 'zh_CN:en'), ('USER', 'zoupeng'), ('LC_TIME', 'zh_CN.UTF-8'), ('all_proxy', 'socks://127.0.0.1:7897/'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/zoupeng/Vision_Arena_2025/install/target_model_pkg/lib:/home/zoupeng/Vision_Arena_2025/install/referee_pkg/lib:/home/zoupeng/Vision_Arena_2025/install/camera/lib:/home/zoupeng/Vision_Arena_2025/install/pose_msg/lib:/home/zoupeng/onnxruntime/lib:/home/zoupeng/TensorRT-10.14.1.48/lib:/home/zoupeng/TensorRT-10.14.1.48/targets/x86_64-linux-gnu/lib:/opt/tensorrt/lib:/opt/tensorrt/lib:/opt/tensorrt/lib:/usr/local/cuda/lib64:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:'), ('HOME', '/home/zoupeng'), ('DESKTOP_SESSION', 'ubuntu'), ('NO_PROXY', 'localhost,127.0.0.1,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,172.29.0.0/16,::1'), ('GAZEBO_MASTER_URI', 'http://localhost:11345'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '2640'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=7f41b07b500b77d5deefd8d66921976e'), ('COLORTERM', 'truecolor'), ('CPLUS_INCLUDE_PATH', '/home/zoupeng/TensorRT-10.14.1.48/include:'), ('IM_CONFIG_PHASE', '1'), ('https_proxy', 'http://127.0.0.1:7897/'), ('COLCON_PREFIX_PATH', '/home/zoupeng/Vision_Arena_2025/install:/home/zoupeng/teamclimber_workspace/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'fcitx'), ('LOGNAME', 'zoupeng'), ('ALL_PROXY', 'socks://127.0.0.1:7897/'), ('http_proxy', 'http://127.0.0.1:7897/'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/usr/local/lib/pkgconfig:'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'zoupeng'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', '/usr/share/gazebo-11/models:'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('OGRE_RESOURCE_PATH', '/usr/lib/x86_64-linux-gnu/OGRE-1.9.0'), ('PATH', '/home/zoupeng/TensorRT-10.14.1.48/bin:/opt/tensorrt/bin:/opt/tensorrt/bin:/opt/tensorrt/bin:/usr/local/cuda/bin:/opt/ros/humble/bin:/home/zoupeng/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/zoupeng-Legion-R9000P-ADR10:@/tmp/.ICE-unix/2640,unix/zoupeng-Legion-R9000P-ADR10:/tmp/.ICE-unix/2640'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/42118732_57f4_4200_9378_7a964a88c424'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('XMODIFIERS', '@im=fcitx'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('TENSORRT_ROOT', '/home/zoupeng/TensorRT-10.14.1.48'), ('GNOME_TERMINAL_SERVICE', ':1.194'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/zoupeng/Vision_Arena_2025/install/target_model_pkg:/home/zoupeng/Vision_Arena_2025/install/player_pkg:/home/zoupeng/Vision_Arena_2025/install/referee_pkg:/home/zoupeng/Vision_Arena_2025/install/camera:/home/zoupeng/Vision_Arena_2025/install/pose_msg:/home/zoupeng/Vision_Arena_2025/install/camera_sim_pkg:/home/zoupeng/teamclimber_workspace/install/teamclimber_challenge:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GAZEBO_RESOURCE_PATH', '/usr/share/gazebo-11:'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('GAZEBO_MODEL_DATABASE_URI', 'http://models.gazebosim.org'), ('QT_IM_MODULE', 'fcitx'), ('PWD', '/home/zoupeng/teamclimber_workspace/build/teamclimber_challenge'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('GAZEBO_PLUGIN_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:'), ('CLUTTER_IM_MODULE', 'fcitx'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=7f41b07b500b77d5deefd8d66921976e'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/zoupeng/Vision_Arena_2025/install/referee_pkg/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('HTTP_PROXY', 'http://127.0.0.1:7897/'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/zoupeng/Vision_Arena_2025/install/target_model_pkg:/home/zoupeng/Vision_Arena_2025/install/player_pkg:/home/zoupeng/Vision_Arena_2025/install/referee_pkg:/home/zoupeng/Vision_Arena_2025/install/camera:/home/zoupeng/Vision_Arena_2025/install/pose_msg:/home/zoupeng/Vision_Arena_2025/install/camera_sim_pkg:/home/zoupeng/teamclimber_workspace/install/teamclimber_challenge:/opt/ros/humble')]), 'shell': False}
+[0.054528] (teamclimber_challenge) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target vision_node\x1b[0m\n'}
+[0.076352] (teamclimber_challenge) StdoutLine: {'line': b'[ 16%] \x1b[32mBuilding CXX object CMakeFiles/vision_node.dir/src/vision_node.cpp.o\x1b[0m\n'}
+[0.077658] (teamclimber_challenge) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/vision_node.dir/src/image_deal.cpp.o\x1b[0m\n'}
+[0.099413] (-) TimerEvent: {}
+[0.199663] (-) TimerEvent: {}
+[0.299953] (-) TimerEvent: {}
+[0.400230] (-) TimerEvent: {}
+[0.500484] (-) TimerEvent: {}
+[0.600742] (-) TimerEvent: {}
+[0.701008] (-) TimerEvent: {}
+[0.801260] (-) TimerEvent: {}
+[0.901530] (-) TimerEvent: {}
+[1.001808] (-) TimerEvent: {}
+[1.102089] (-) TimerEvent: {}
+[1.202404] (-) TimerEvent: {}
+[1.302691] (-) TimerEvent: {}
+[1.402974] (-) TimerEvent: {}
+[1.503261] (-) TimerEvent: {}
+[1.603546] (-) TimerEvent: {}
+[1.703817] (-) TimerEvent: {}
+[1.804076] (-) TimerEvent: {}
+[1.904326] (-) TimerEvent: {}
+[2.001019] (teamclimber_challenge) StderrLine: {'line': b'\x1b[01m\x1b[K/home/zoupeng/teamclimber_workspace/src/teamclimber_challenge/src/image_deal.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid vision_node::callback_camera(sensor_msgs::msg::Image_<std::allocator<void> >::SharedPtr)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.001319] (teamclimber_challenge) StderrLine: {'line': b'\x1b[01m\x1b[K/home/zoupeng/teamclimber_workspace/src/teamclimber_challenge/src/image_deal.cpp:68:70:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno match for \xe2\x80\x98\x1b[01m\x1b[Koperator=\x1b[m\x1b[K\xe2\x80\x99 (operand types are \xe2\x80\x98\x1b[01m\x1b[Kcv::Mat\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kvoid\x1b[m\x1b[K\xe2\x80\x99)\n'}
+[2.001368] (teamclimber_challenge) StderrLine: {'line': b'   68 |     mask1 = cv::inRange(hsv, sphere_red_low1, sphere_red_high1, mask1\x1b[01;31m\x1b[K)\x1b[m\x1b[K;\n'}
+[2.001409] (teamclimber_challenge) StderrLine: {'line': b'      |                                                                      \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[2.001443] (teamclimber_challenge) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/local/include/opencv4/opencv2/core.hpp:58\x1b[m\x1b[K,\n'}
+[2.001585] (teamclimber_challenge) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/zoupeng/teamclimber_workspace/src/teamclimber_challenge/include/image_deal.h:7\x1b[m\x1b[K,\n'}
+[2.001614] (teamclimber_challenge) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/zoupeng/teamclimber_workspace/src/teamclimber_challenge/src/image_deal.cpp:1\x1b[m\x1b[K:\n'}
+[2.001639] (teamclimber_challenge) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/local/include/opencv4/opencv2/core/mat.hpp:1064:10:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kcv::Mat& cv::Mat::operator=(const cv::Mat&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.001666] (teamclimber_challenge) StderrLine: {'line': b' 1064 |     Mat& \x1b[01;36m\x1b[Koperator\x1b[m\x1b[K = (const Mat& m);\n'}
+[2.001692] (teamclimber_challenge) StderrLine: {'line': b'      |          \x1b[01;36m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[2.001718] (teamclimber_challenge) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/local/include/opencv4/opencv2/core/mat.hpp:1064:33:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  no known conversion for argument 1 from \xe2\x80\x98\x1b[01m\x1b[Kvoid\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kconst cv::Mat&\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.001747] (teamclimber_challenge) StderrLine: {'line': b' 1064 |     Mat& operator = (\x1b[01;36m\x1b[Kconst Mat& m\x1b[m\x1b[K);\n'}
+[2.001773] (teamclimber_challenge) StderrLine: {'line': b'      |                      \x1b[01;36m\x1b[K~~~~~~~~~~~^\x1b[m\x1b[K\n'}
+[2.001798] (teamclimber_challenge) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/local/include/opencv4/opencv2/core/mat.hpp:3764\x1b[m\x1b[K,\n'}
+[2.001824] (teamclimber_challenge) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/local/include/opencv4/opencv2/core.hpp:58\x1b[m\x1b[K,\n'}
+[2.001849] (teamclimber_challenge) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/zoupeng/teamclimber_workspace/src/teamclimber_challenge/include/image_deal.h:7\x1b[m\x1b[K,\n'}
+[2.001874] (teamclimber_challenge) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/zoupeng/teamclimber_workspace/src/teamclimber_challenge/src/image_deal.cpp:1\x1b[m\x1b[K:\n'}
+[2.001899] (teamclimber_challenge) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/local/include/opencv4/opencv2/core/mat.inl.hpp:3008:6:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kcv::Mat& cv::Mat::operator=(const cv::MatExpr&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.001928] (teamclimber_challenge) StderrLine: {'line': b' 3008 | Mat& \x1b[01;36m\x1b[KMat\x1b[m\x1b[K::operator = (const MatExpr& e)\n'}
+[2.001952] (teamclimber_challenge) StderrLine: {'line': b'      |      \x1b[01;36m\x1b[K^~~\x1b[m\x1b[K\n'}
+[2.001977] (teamclimber_challenge) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/local/include/opencv4/opencv2/core/mat.inl.hpp:3008:38:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  no known conversion for argument 1 from \xe2\x80\x98\x1b[01m\x1b[Kvoid\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kconst cv::MatExpr&\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.002003] (teamclimber_challenge) StderrLine: {'line': b' 3008 | Mat& Mat::operator = (\x1b[01;36m\x1b[Kconst MatExpr& e\x1b[m\x1b[K)\n'}
+[2.002028] (teamclimber_challenge) StderrLine: {'line': b'      |                       \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~^\x1b[m\x1b[K\n'}
+[2.002053] (teamclimber_challenge) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/local/include/opencv4/opencv2/core.hpp:58\x1b[m\x1b[K,\n'}
+[2.002077] (teamclimber_challenge) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/zoupeng/teamclimber_workspace/src/teamclimber_challenge/include/image_deal.h:7\x1b[m\x1b[K,\n'}
+[2.002102] (teamclimber_challenge) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/zoupeng/teamclimber_workspace/src/teamclimber_challenge/src/image_deal.cpp:1\x1b[m\x1b[K:\n'}
+[2.002126] (teamclimber_challenge) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/local/include/opencv4/opencv2/core/mat.hpp:1251:10:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kcv::Mat& cv::Mat::operator=(const Scalar&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.002153] (teamclimber_challenge) StderrLine: {'line': b' 1251 |     Mat& \x1b[01;36m\x1b[Koperator\x1b[m\x1b[K = (const Scalar& s);\n'}
+[2.002192] (teamclimber_challenge) StderrLine: {'line': b'      |          \x1b[01;36m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[2.002220] (teamclimber_challenge) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/local/include/opencv4/opencv2/core/mat.hpp:1251:36:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  no known conversion for argument 1 from \xe2\x80\x98\x1b[01m\x1b[Kvoid\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kconst Scalar&\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kconst cv::Scalar_<double>&\x1b[m\x1b[K\xe2\x80\x99}\n'}
+[2.002256] (teamclimber_challenge) StderrLine: {'line': b' 1251 |     Mat& operator = (\x1b[01;36m\x1b[Kconst Scalar& s\x1b[m\x1b[K);\n'}
+[2.002282] (teamclimber_challenge) StderrLine: {'line': b'      |                      \x1b[01;36m\x1b[K~~~~~~~~~~~~~~^\x1b[m\x1b[K\n'}
+[2.002306] (teamclimber_challenge) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/local/include/opencv4/opencv2/core/mat.hpp:2092:10:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kcv::Mat& cv::Mat::operator=(cv::Mat&&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.002337] (teamclimber_challenge) StderrLine: {'line': b' 2092 |     Mat& \x1b[01;36m\x1b[Koperator\x1b[m\x1b[K = (Mat&& m);\n'}
+[2.002363] (teamclimber_challenge) StderrLine: {'line': b'      |          \x1b[01;36m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[2.002392] (teamclimber_challenge) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/local/include/opencv4/opencv2/core/mat.hpp:2092:28:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  no known conversion for argument 1 from \xe2\x80\x98\x1b[01m\x1b[Kvoid\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kcv::Mat&&\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.002419] (teamclimber_challenge) StderrLine: {'line': b' 2092 |     Mat& operator = (\x1b[01;36m\x1b[KMat&& m\x1b[m\x1b[K);\n'}
+[2.002446] (teamclimber_challenge) StderrLine: {'line': b'      |                      \x1b[01;36m\x1b[K~~~~~~^\x1b[m\x1b[K\n'}
+[2.002471] (teamclimber_challenge) StderrLine: {'line': b'\x1b[01m\x1b[K/home/zoupeng/teamclimber_workspace/src/teamclimber_challenge/src/image_deal.cpp:69:70:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno match for \xe2\x80\x98\x1b[01m\x1b[Koperator=\x1b[m\x1b[K\xe2\x80\x99 (operand types are \xe2\x80\x98\x1b[01m\x1b[Kcv::Mat\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kvoid\x1b[m\x1b[K\xe2\x80\x99)\n'}
+[2.002499] (teamclimber_challenge) StderrLine: {'line': b'   69 |     mask2 = cv::inRange(hsv, sphere_red_low2, sphere_red_high2, mask2\x1b[01;31m\x1b[K)\x1b[m\x1b[K;\n'}
+[2.002524] (teamclimber_challenge) StderrLine: {'line': b'      |                                                                      \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[2.002548] (teamclimber_challenge) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/local/include/opencv4/opencv2/core.hpp:58\x1b[m\x1b[K,\n'}
+[2.002573] (teamclimber_challenge) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/zoupeng/teamclimber_workspace/src/teamclimber_challenge/include/image_deal.h:7\x1b[m\x1b[K,\n'}
+[2.002598] (teamclimber_challenge) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/zoupeng/teamclimber_workspace/src/teamclimber_challenge/src/image_deal.cpp:1\x1b[m\x1b[K:\n'}
+[2.002622] (teamclimber_challenge) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/local/include/opencv4/opencv2/core/mat.hpp:1064:10:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kcv::Mat& cv::Mat::operator=(const cv::Mat&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.002647] (teamclimber_challenge) StderrLine: {'line': b' 1064 |     Mat& \x1b[01;36m\x1b[Koperator\x1b[m\x1b[K = (const Mat& m);\n'}
+[2.002671] (teamclimber_challenge) StderrLine: {'line': b'      |          \x1b[01;36m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[2.002695] (teamclimber_challenge) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/local/include/opencv4/opencv2/core/mat.hpp:1064:33:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  no known conversion for argument 1 from \xe2\x80\x98\x1b[01m\x1b[Kvoid\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kconst cv::Mat&\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.002720] (teamclimber_challenge) StderrLine: {'line': b' 1064 |     Mat& operator = (\x1b[01;36m\x1b[Kconst Mat& m\x1b[m\x1b[K);\n'}
+[2.002745] (teamclimber_challenge) StderrLine: {'line': b'      |                      \x1b[01;36m\x1b[K~~~~~~~~~~~^\x1b[m\x1b[K\n'}
+[2.002770] (teamclimber_challenge) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/local/include/opencv4/opencv2/core/mat.hpp:3764\x1b[m\x1b[K,\n'}
+[2.002794] (teamclimber_challenge) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/local/include/opencv4/opencv2/core.hpp:58\x1b[m\x1b[K,\n'}
+[2.002819] (teamclimber_challenge) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/zoupeng/teamclimber_workspace/src/teamclimber_challenge/include/image_deal.h:7\x1b[m\x1b[K,\n'}
+[2.002842] (teamclimber_challenge) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/zoupeng/teamclimber_workspace/src/teamclimber_challenge/src/image_deal.cpp:1\x1b[m\x1b[K:\n'}
+[2.002867] (teamclimber_challenge) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/local/include/opencv4/opencv2/core/mat.inl.hpp:3008:6:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kcv::Mat& cv::Mat::operator=(const cv::MatExpr&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.002892] (teamclimber_challenge) StderrLine: {'line': b' 3008 | Mat& \x1b[01;36m\x1b[KMat\x1b[m\x1b[K::operator = (const MatExpr& e)\n'}
+[2.002916] (teamclimber_challenge) StderrLine: {'line': b'      |      \x1b[01;36m\x1b[K^~~\x1b[m\x1b[K\n'}
+[2.002941] (teamclimber_challenge) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/local/include/opencv4/opencv2/core/mat.inl.hpp:3008:38:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  no known conversion for argument 1 from \xe2\x80\x98\x1b[01m\x1b[Kvoid\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kconst cv::MatExpr&\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.002966] (teamclimber_challenge) StderrLine: {'line': b' 3008 | Mat& Mat::operator = (\x1b[01;36m\x1b[Kconst MatExpr& e\x1b[m\x1b[K)\n'}
+[2.002992] (teamclimber_challenge) StderrLine: {'line': b'      |                       \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~^\x1b[m\x1b[K\n'}
+[2.003017] (teamclimber_challenge) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/local/include/opencv4/opencv2/core.hpp:58\x1b[m\x1b[K,\n'}
+[2.003041] (teamclimber_challenge) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/zoupeng/teamclimber_workspace/src/teamclimber_challenge/include/image_deal.h:7\x1b[m\x1b[K,\n'}
+[2.003064] (teamclimber_challenge) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/zoupeng/teamclimber_workspace/src/teamclimber_challenge/src/image_deal.cpp:1\x1b[m\x1b[K:\n'}
+[2.003089] (teamclimber_challenge) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/local/include/opencv4/opencv2/core/mat.hpp:1251:10:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kcv::Mat& cv::Mat::operator=(const Scalar&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.003113] (teamclimber_challenge) StderrLine: {'line': b' 1251 |     Mat& \x1b[01;36m\x1b[Koperator\x1b[m\x1b[K = (const Scalar& s);\n'}
+[2.003138] (teamclimber_challenge) StderrLine: {'line': b'      |          \x1b[01;36m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[2.003163] (teamclimber_challenge) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/local/include/opencv4/opencv2/core/mat.hpp:1251:36:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  no known conversion for argument 1 from \xe2\x80\x98\x1b[01m\x1b[Kvoid\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kconst Scalar&\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kconst cv::Scalar_<double>&\x1b[m\x1b[K\xe2\x80\x99}\n'}
+[2.003201] (teamclimber_challenge) StderrLine: {'line': b' 1251 |     Mat& operator = (\x1b[01;36m\x1b[Kconst Scalar& s\x1b[m\x1b[K);\n'}
+[2.003226] (teamclimber_challenge) StderrLine: {'line': b'      |                      \x1b[01;36m\x1b[K~~~~~~~~~~~~~~^\x1b[m\x1b[K\n'}
+[2.003250] (teamclimber_challenge) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/local/include/opencv4/opencv2/core/mat.hpp:2092:10:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kcv::Mat& cv::Mat::operator=(cv::Mat&&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.003275] (teamclimber_challenge) StderrLine: {'line': b' 2092 |     Mat& \x1b[01;36m\x1b[Koperator\x1b[m\x1b[K = (Mat&& m);\n'}
+[2.003300] (teamclimber_challenge) StderrLine: {'line': b'      |          \x1b[01;36m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[2.003323] (teamclimber_challenge) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/local/include/opencv4/opencv2/core/mat.hpp:2092:28:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  no known conversion for argument 1 from \xe2\x80\x98\x1b[01m\x1b[Kvoid\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kcv::Mat&&\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.003351] (teamclimber_challenge) StderrLine: {'line': b' 2092 |     Mat& operator = (\x1b[01;36m\x1b[KMat&& m\x1b[m\x1b[K);\n'}
+[2.003376] (teamclimber_challenge) StderrLine: {'line': b'      |                      \x1b[01;36m\x1b[K~~~~~~^\x1b[m\x1b[K\n'}
+[2.004387] (-) TimerEvent: {}
+[2.104567] (-) TimerEvent: {}
+[2.204814] (-) TimerEvent: {}
+[2.305056] (-) TimerEvent: {}
+[2.405305] (-) TimerEvent: {}
+[2.505520] (-) TimerEvent: {}
+[2.605716] (-) TimerEvent: {}
+[2.705929] (-) TimerEvent: {}
+[2.806176] (-) TimerEvent: {}
+[2.906427] (-) TimerEvent: {}
+[3.006672] (-) TimerEvent: {}
+[3.106922] (-) TimerEvent: {}
+[3.189890] (teamclimber_challenge) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/vision_node.dir/build.make:551\xef\xbc\x9aCMakeFiles/vision_node.dir/src/image_deal.cpp.o] \xe9\x94\x99\xe8\xaf\xaf 1\n'}
+[3.190064] (teamclimber_challenge) StderrLine: {'line': b'gmake[2]: *** \xe6\xad\xa3\xe5\x9c\xa8\xe7\xad\x89\xe5\xbe\x85\xe6\x9c\xaa\xe5\xae\x8c\xe6\x88\x90\xe7\x9a\x84\xe4\xbb\xbb\xe5\x8a\xa1....\n'}
+[3.207023] (-) TimerEvent: {}
+[3.307264] (-) TimerEvent: {}
+[3.407542] (-) TimerEvent: {}
+[3.507802] (-) TimerEvent: {}
+[3.608040] (-) TimerEvent: {}
+[3.708300] (-) TimerEvent: {}
+[3.808500] (-) TimerEvent: {}
+[3.908686] (-) TimerEvent: {}
+[4.008880] (-) TimerEvent: {}
+[4.109078] (-) TimerEvent: {}
+[4.209297] (-) TimerEvent: {}
+[4.309505] (-) TimerEvent: {}
+[4.409726] (-) TimerEvent: {}
+[4.509954] (-) TimerEvent: {}
+[4.610233] (-) TimerEvent: {}
+[4.710485] (-) TimerEvent: {}
+[4.810714] (-) TimerEvent: {}
+[4.910925] (-) TimerEvent: {}
+[5.011162] (-) TimerEvent: {}
+[5.111441] (-) TimerEvent: {}
+[5.211718] (-) TimerEvent: {}
+[5.265490] (teamclimber_challenge) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:137\xef\xbc\x9aCMakeFiles/vision_node.dir/all] \xe9\x94\x99\xe8\xaf\xaf 2\n'}
+[5.265691] (teamclimber_challenge) StderrLine: {'line': b'gmake: *** [Makefile:146\xef\xbc\x9aall] \xe9\x94\x99\xe8\xaf\xaf 2\n'}
+[5.267523] (teamclimber_challenge) CommandEnded: {'returncode': 2}
+[5.273143] (teamclimber_challenge) JobEnded: {'identifier': 'teamclimber_challenge', 'rc': 2}
+[5.283383] (-) EventReactorShutdown: {}
