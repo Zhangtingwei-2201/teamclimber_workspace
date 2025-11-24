@@ -6,6 +6,7 @@
 4、使用ultralytic训练了一个识别装甲板的YOLO模型  
 5、实现在C++中用TensorRT加速推理模型来识别装甲板  
 6、额外训练了一个识别rect的YOLO模型作为识别rect的备选方案  
+7、基本实现了坐标的PnP解算
 ## 工具环境情况
 1、C++、ros2、opencv版本均符合官方要求  
 2、YOLO模型以YOLO11n.pt为基础训练  
