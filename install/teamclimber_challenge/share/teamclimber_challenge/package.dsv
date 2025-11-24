@@ -1,8 +1,0 @@
-source;share/teamclimber_challenge/hook/cmake_prefix_path.ps1
-source;share/teamclimber_challenge/hook/cmake_prefix_path.dsv
-source;share/teamclimber_challenge/hook/cmake_prefix_path.sh
-source;share/teamclimber_challenge/local_setup.bash
-source;share/teamclimber_challenge/local_setup.dsv
-source;share/teamclimber_challenge/local_setup.ps1
-source;share/teamclimber_challenge/local_setup.sh
-source;share/teamclimber_challenge/local_setup.zsh
