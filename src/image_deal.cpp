@@ -195,15 +195,6 @@ void vision_node::callback_camera(sensor_msgs::msg::Image::SharedPtr msg)
 
       valid_rects++;
 
-      // 四个点的颜色
-      std::vector<std::string> point_names = {"左下", "右下", "右上", "左上"};
-      std::vector<cv::Scalar> point_colors = {
-          cv::Scalar(255, 0, 0),   // 蓝色-左
-          cv::Scalar(0, 255, 0),   // 绿色-下
-          cv::Scalar(0, 255, 255), // 黄色-右
-          cv::Scalar(255, 0, 255)  // 紫色-上
-      };
-
       // 至少要有4个点才能组成矩形
       if (poly.size() < 4)
         continue;
