@@ -36,7 +36,7 @@ public:
     static std::vector<cv::Point3f> calculateArmor3DCorners(float half_width, float half_height);
 
     // 计算低弹道仰角
-    static double calculateLowTanElevation(double x, double y, double z, double v0, double g);
+    static double calculateLowPitch(double x, double y, double z, double v0, double g);
 };
 
 #endif

@@ -73,12 +73,3 @@ std::vector<cv::Point3f> shape_tools::calculateArmor3DCorners(float half_width, 
 
   return points;
 }
-
-double shape_tools::calculateLowTanElevation(double x, double y, double z, double v0, double g)
-{
-  double r = std::sqrt(x * x + y * y);
-  double discriminant = (v0 * v0 * v0 * v0 - 2 * g * z * v0 * v0 - g * g * r * r);
-  double tan_theta = (v0 * v0 - std::sqrt(discriminant)) / (g * r);
-
-  return tan_theta;
-}

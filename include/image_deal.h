@@ -78,7 +78,7 @@ private:
   double rect_min_area = 100.0;   // 矩形最小面积
   double rect_max_ratio = 8.0;    // 最大长宽比（太细长不要），ratio=长边/短边
   double rect_min_ratio = 1.1;    // 最小长宽比（避免接近正方形时误判）
-  double approx_eps_ratio = 0.02; // approxPolyDP系数
+  double approx_eps_ratio = 0.01; // approxPolyDP系数
 };
 
 #endif

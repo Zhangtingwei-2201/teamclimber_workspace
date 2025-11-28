@@ -12,5 +12,12 @@
 2、YOLO模型以YOLO11n.pt为基础训练  
 3、数据库来源于网上搜集与自己采集  
 4、TensorRT版本：10.14.1.48，CUDA版本：12.2，CuDNN版本：9.16.0  
-## 技术报告文档
+## 节点运行
+视觉识别节点：  
+source ~/teamclimber_workspace/install/setup.bash  
+ros2 launch teamclimber_challenge vision.launch.py  
+弹丸击打节点：  
+source ~/teamclimber_workspace/install/setup.bash  
+ros2 launch teamclimber_challenge shooter.launch.py  
+## 技术报告文档 
 https://www.yuque.com/codezero-kv7wr/ivc8n1/ouutb92frviycbwf#PMBKQ  

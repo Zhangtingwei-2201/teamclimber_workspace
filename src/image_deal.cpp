@@ -151,12 +151,12 @@ void vision_node::callback_camera(sensor_msgs::msg::Image::SharedPtr msg)
     cv::Mat cyan_mask;
     cv::inRange(hsv, rect_cyan_low, rect_cyan_high, cyan_mask);
 
-    // 形态学去噪（轻度）
+    // 形态学去噪
     cv::Mat cyan_kernel = cv::getStructuringElement(cv::MORPH_RECT, cv::Size(5, 5));
     cv::morphologyEx(cyan_mask, cyan_mask, cv::MORPH_OPEN, cyan_kernel);
     cv::morphologyEx(cyan_mask, cyan_mask, cv::MORPH_CLOSE, cyan_kernel);
 
-    // 找 cyan 的轮廓
+    // 找cyan的轮廓
     std::vector<std::vector<cv::Point>> cyan_contours;
     cv::findContours(cyan_mask, cyan_contours, cv::RETR_EXTERNAL, cv::CHAIN_APPROX_SIMPLE);
 
@@ -173,68 +173,159 @@ void vision_node::callback_camera(sensor_msgs::msg::Image::SharedPtr msg)
       if (peri < 1e-3)
         continue;
 
-      // 逼近四边形
+      // 逼近多边形
       std::vector<cv::Point> poly;
       cv::approxPolyDP(cyan_contours[i], poly, approx_eps_ratio * peri, true);
 
-      if (poly.size() > 7 && poly.size() < 3)
+      if (poly.size() < 3 || poly.size() > 7)
         continue;
       if (!cv::isContourConvex(poly))
         continue;
 
-      // 用最小外接旋转矩形估计宽高/比例
+      // 最小外接矩形
       cv::RotatedRect rr = cv::minAreaRect(poly);
       float w = rr.size.width;
       float h = rr.size.height;
       if (w < 5 || h < 5)
         continue;
 
-      float ratio = w > h ? w / h : h / w;
+      float ratio = (w > h ? w / h : h / w);
       if (ratio < rect_min_ratio || ratio > rect_max_ratio)
         continue;
 
       valid_rects++;
 
-      // poly 转 Point2f
-      std::vector<cv::Point2f> pts;
-      for (auto &p : poly)
-        pts.emplace_back(p.x, p.y);
+      // 四个点的颜色
+      std::vector<std::string> point_names = {"左下", "右下", "右上", "左上"};
+      std::vector<cv::Scalar> point_colors = {
+          cv::Scalar(255, 0, 0),   // 蓝色-左
+          cv::Scalar(0, 255, 0),   // 绿色-下
+          cv::Scalar(0, 255, 255), // 黄色-右
+          cv::Scalar(255, 0, 255)  // 紫色-上
+      };
 
-      // 排序成：TL TR BR BL -> 输出顺序：1左下 2右下 3右上 4左上
-      std::sort(pts.begin(), pts.end(),
+      // 至少要有4个点才能组成矩形
+      if (poly.size() < 4)
+        continue;
+
+      // 把poly全部转成Point2f
+      std::vector<cv::Point2f> all_pts;
+      all_pts.reserve(poly.size());
+      for (size_t i = 0; i < poly.size(); ++i)
+      {
+        cv::Point &p = poly[i];
+        all_pts.emplace_back(static_cast<float>(p.x), static_cast<float>(p.y));
+      }
+
+      // 在所有从n个点中选4个点的组合里，找误差最小的一组
+      double best_cost = std::numeric_limits<double>::max();
+      bool found_best = false;
+      cv::Point2f best_tl, best_tr, best_bl, best_br;
+
+      int n = static_cast<int>(all_pts.size());
+      for (int a = 0; a <= n - 4; ++a)
+      {
+        for (int b = a + 1; b <= n - 3; ++b)
+        {
+          for (int c = b + 1; c <= n - 2; ++c)
+          {
+            for (int d = c + 1; d <= n - 1; ++d)
+            {
+              // 当前这一组4个点
+              std::vector<cv::Point2f> cand = {
+                  all_pts[a], all_pts[b], all_pts[c], all_pts[d]};
+
+              // 对这4个点做一次“上/下 + 左/右”分类
+              std::vector<cv::Point2f> tmp = cand;
+
+              // 先按y从小到大排序：前2个是上面的，后2个是下面的
+              std::sort(tmp.begin(), tmp.end(),
+                        [](const cv::Point2f &p1, const cv::Point2f &p2)
+                        { return p1.y < p2.y; });
+
+              std::vector<cv::Point2f> top{tmp[0], tmp[1]};
+              std::vector<cv::Point2f> bottom{tmp[2], tmp[3]};
+
+              // 上下各自按x从小到大排序：从左到右
+              std::sort(top.begin(), top.end(),
+                        [](const cv::Point2f &p1, const cv::Point2f &p2)
+                        { return p1.x < p2.x; });
+              std::sort(bottom.begin(), bottom.end(),
+                        [](const cv::Point2f &p1, const cv::Point2f &p2)
+                        { return p1.x < p2.x; });
+
+              cv::Point2f tl = top[0];    // 左上
+              cv::Point2f tr = top[1];    // 右上
+              cv::Point2f bl = bottom[0]; // 左下
+              cv::Point2f br = bottom[1]; // 右下
+
+              // 误差公式：
+              //|左上x-左下x|+|右上x-右下x|+|左上y-右上y|+|左下y-右下y|
+              double cost = std::fabs(tl.x - bl.x) + std::fabs(tr.x - br.x) +
+                            std::fabs(tl.y - tr.y) + std::fabs(bl.y - br.y);
+
+              if (cost < best_cost)
+              {
+                best_cost = cost;
+                found_best = true;
+                best_tl = tl;
+                best_tr = tr;
+                best_bl = bl;
+                best_br = br;
+              }
+            }
+          }
+        }
+      }
+
+      std::vector<cv::Point2f> tmp4 = {best_bl, best_br, best_tr, best_tl};
+
+      // 按y从小到大排序：tmp4[0]、tmp4[1] 是最高的两个点
+      std::sort(tmp4.begin(), tmp4.end(),
                 [](const cv::Point2f &a, const cv::Point2f &b)
                 { return a.y < b.y; });
 
-      std::vector<cv::Point2f> top{pts[0], pts[1]};
-      std::vector<cv::Point2f> bottom{pts[2], pts[3]};
+      // 最高的两个点
+      cv::Point2f top0 = tmp4[0];
+      cv::Point2f top1 = tmp4[1];
 
-      std::sort(top.begin(), top.end(),
-                [](const cv::Point2f &a, const cv::Point2f &b)
-                { return a.x < b.x; });
-      std::sort(bottom.begin(), bottom.end(),
-                [](const cv::Point2f &a, const cv::Point2f &b)
-                { return a.x < b.x; });
+      // 上边y：取两者的较小值
+      float top_y = std::min(top0.y, top1.y);
 
-      cv::Point2f tl = top[0], tr = top[1];
-      cv::Point2f bl = bottom[0], br = bottom[1];
+      // 第三高点的 y，当作矩形底边 y
+      float third_y = tmp4[2].y;
 
-      std::vector<cv::Point2f> rect_points = {bl, br, tr, tl};
+      // 上下边长度只由最高两个点的 x 决定
+      float left_x = std::min(top0.x, top1.x);
+      float right_x = std::max(top0.x, top1.x);
 
-      // 红色矩形边框
-      for (int j = 0; j < 4; j++)
+      // 用这四个坐标构成“新矩形”的四个角
+      cv::Point2f rect_tl(left_x, top_y);    // 左上
+      cv::Point2f rect_tr(right_x, top_y);   // 右上
+      cv::Point2f rect_bl(left_x, third_y);  // 左下
+      cv::Point2f rect_br(right_x, third_y); // 右下
+
+      // 定义 rect_points 顺序：1 左下，2 右下，3 右上，4 左上
+      std::vector<cv::Point2f> rect_points = {
+          rect_bl, rect_br, rect_tr, rect_tl};
+
+      // 用这个矩形来画框
+      cv::Rect box(cvRound(left_x),
+                   cvRound(top_y),
+                   cvRound(right_x - left_x),
+                   cvRound(third_y - top_y));
+
+      if (box.width <= 0 || box.height <= 0)
       {
-        cv::line(result_image,
-                 rect_points[j],
-                 rect_points[(j + 1) % 4],
-                 cv::Scalar(0, 0, 255), // BGR 红色
-                 4);                    // 宽
+        RCLCPP_WARN(this->get_logger(), "Invalid rect box (w<=0 or h<=0).");
+        continue;
       }
-
+      // 红色边框
+      cv::rectangle(result_image, box, cv::Scalar(0, 0, 255), 4);
       for (int j = 0; j < 4; j++)
       {
-        // 彩色实心点
+        // 彩色实心点+黑边
         cv::circle(result_image, rect_points[j], 7, point_colors[j], -1);
-        // 黑色描边
         cv::circle(result_image, rect_points[j], 7, cv::Scalar(0, 0, 0), 2);
 
         // 编号
@@ -243,17 +334,21 @@ void vision_node::callback_camera(sensor_msgs::msg::Image::SharedPtr msg)
 
         cv::putText(result_image, point_text, text_pos,
                     cv::FONT_HERSHEY_SIMPLEX, 0.8,
-                    cv::Scalar(255, 255, 255), 4); // 白色描边
+                    cv::Scalar(255, 255, 255), 4);
         cv::putText(result_image, point_text, text_pos,
                     cv::FONT_HERSHEY_SIMPLEX, 0.8,
-                    point_colors[j], 2); // 彩色字
+                    point_colors[j], 2);
 
-        RCLCPP_INFO(this->get_logger(), "Rect %d, Point(%s): (%.1f, %.1f)",
-                    valid_rects, point_names[j].c_str(), rect_points[j].x, rect_points[j].y);
+        RCLCPP_INFO(this->get_logger(),
+                    "Rect %d, Point(%s): (%.1f, %.1f)",
+                    valid_rects, point_names[j].c_str(),
+                    rect_points[j].x, rect_points[j].y);
       }
 
-      RCLCPP_INFO(this->get_logger(), "Found rect %d: center=(%.1f,%.1f) w=%.1f h=%.1f ratio=%.2f",
-                  valid_rects, rr.center.x, rr.center.y, w, h, ratio);
+      RCLCPP_INFO(this->get_logger(),
+                  "Found rect %d: center=(%.1f,%.1f) w=%.1f h=%.1f ratio=%.2f",
+                  valid_rects, rr.center.x, rr.center.y,
+                  w, h, ratio);
 
       DetectedObject rect_obj;
       rect_obj.type = "rect";
