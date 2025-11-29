@@ -1,15 +1,15 @@
 {
     "RaceStage3": [
         {
-            "average_numdetecterror": 0.422,
+            "average_numdetecterror": 0.427,
             "average_orientationerror": 3.14,
             "fps": 43,
             "max_numdetecterror": 999.0,
             "max_orientationerror": 3.14,
-            "run_id": "99865fda-fddb-4e2f-ba5e-c9564f160554",
+            "run_id": "a84455ec-85fa-41bf-be4b-2fdbb38a4334",
             "score": 0.0,
             "target_type": "armor_red_2",
-            "timestamp": "2025-11-29T16:03:51Z"
+            "timestamp": "2025-11-29T16:37:30Z"
         },
         {
             "average_numdetecterror": 0.236,
@@ -17,10 +17,10 @@
             "fps": 43,
             "max_numdetecterror": 0.236,
             "max_orientationerror": 1.665,
-            "run_id": "b46ec52e-bd18-451a-bcdf-8e03d828d3dc",
+            "run_id": "8369a2ed-71d4-4582-a2c7-9cb5552267f3",
             "score": 12.0,
             "target_type": "armor_red_1",
-            "timestamp": "2025-11-29T16:03:51Z"
+            "timestamp": "2025-11-29T16:37:30Z"
         },
         {
             "average_numdetecterror": 0.236,
@@ -28,21 +28,21 @@
             "fps": 43,
             "max_numdetecterror": 999.0,
             "max_orientationerror": 3.14,
-            "run_id": "20da4225-7d17-4ad5-859e-ac66a6746496",
+            "run_id": "5bd0ca35-9aba-4842-b0a0-b791f45d9614",
             "score": 0.0,
             "target_type": "armor_red_3",
-            "timestamp": "2025-11-29T16:03:51Z"
+            "timestamp": "2025-11-29T16:37:30Z"
         },
         {
-            "average_numdetecterror": 0.422,
-            "average_orientationerror": 1.641,
+            "average_numdetecterror": 0.427,
+            "average_orientationerror": 1.637,
             "fps": 43,
             "max_numdetecterror": 0.452,
             "max_orientationerror": 1.664,
-            "run_id": "6dc76aff-8a4d-4258-b35a-c5bbbfdfc222",
+            "run_id": "ee952a66-6072-4615-b967-265d27aedf2e",
             "score": 10.0,
             "target_type": "armor_red_4",
-            "timestamp": "2025-11-29T16:03:51Z"
+            "timestamp": "2025-11-29T16:37:30Z"
         }
     ],
     "team_name": "TEAM4"
