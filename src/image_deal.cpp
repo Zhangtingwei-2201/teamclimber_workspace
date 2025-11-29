@@ -272,6 +272,7 @@ void vision_node::callback_camera(sensor_msgs::msg::Image::SharedPtr msg)
             cv::Point2f main_dir(
                 (float)pca.eigenvectors.at<double>(0, 0),
                 (float)pca.eigenvectors.at<double>(0, 1));
+            
             // 单位化
             float len = std::sqrt(main_dir.x * main_dir.x + main_dir.y * main_dir.y);
             main_dir.x /= len;
