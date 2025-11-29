@@ -1,14 +1,14 @@
 {
     "RaceStage2": {
-        "average_directerror": 2.273,
-        "average_positionerror": 6.737,
-        "fps": 43,
-        "max_directerror": 3.109,
-        "max_positionerror": 7.187,
-        "run_id": "2a9cf61b-4bac-4e55-b1aa-d3a219fa08d2",
-        "score": 5.0,
+        "average_directerror": 2.0,
+        "average_positionerror": 0.21,
+        "fps": 44,
+        "max_directerror": 3.139,
+        "max_positionerror": 2.91,
+        "run_id": "39d6add0-efde-4a8a-bd42-060ce9cea1c4",
+        "score": 15.5,
         "target_type": "arrow",
         "team_name": "TEAM4",
-        "timestamp": "2025-11-29T15:57:18Z"
+        "timestamp": "2025-11-29T17:36:22Z"
     }
 }
