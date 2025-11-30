@@ -8,13 +8,16 @@
 6、额外训练了一个识别rect的YOLO模型作为识别rect的备选方案  
 7、基本实现了坐标的PnP解算  
 8、优化了rect的识别，用OpenCV库的卡尔曼滤波实现粗糙的动态目标识别  
+9、使用opencv完成了对圆环的识别和发布  
+10、使用opencv的PCA完成了对箭头的识别和发布  
+11、完成了对阶段话题的订阅和使用  
 ## 工具环境情况
 1、C++、ros2、opencv版本均符合官方要求  
 2、YOLO模型以YOLO11n.pt为基础训练  
 3、数据库来源于网上搜集与自己采集  
 4、TensorRT版本：10.14.1.48，CUDA版本：12.2，CuDNN版本：9.16.0  
 ## 节点运行
-视觉识别节点：  设
+视觉识别节点：  
 source ~/teamclimber_workspace/install/setup.bash  
 ros2 launch teamclimber_challenge vision.launch.py  
 弹丸击打节点：  
